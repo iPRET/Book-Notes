@@ -1683,10 +1683,41 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           Cantor
           
       B.5 What is a legitimate mathematical function?
-        @Note draft
+        Not sure if I understand correctly, but.
+        A faliure that sometime occurs when a new field of math is discovered:
+          1) New math objects with useful properties are discovered, though
+            some analogies with other known math objects.
+          2) The new ones are defined using the known math objects.
+          3) Some of the new objects can't be defined using the known objects.
+          4) This leads to some new objects not being explored, even though 
+            they have practical applications.
           
+          e.g.
+            Fourier transforms
+              1) Discovered though some integrals. They had useful properties.
+              2) Defined though integrals.
+              3) Some integrals didn't converge.
+              4) Corresponding Fourier transforms did exist, and could be used?
         
+          How do people fix this?
+            Define the new math objects through the useful properties.
+              
+            why?
+              That includes the situations where the definition through known
+              objects works,
+              but also allows exploration of other objects.
         
+        @Notes Draft
+          There was a beef between
+            pure math, and
+              Defined function as set to set mapping
+            applied math
+              Sort of acted as if functions defined through Fourier transforms
+              existed.
+              Although some don't in the set to set mapping definition?
+        
+        B.5.1 Delta-functions
+          @
         
         
           
