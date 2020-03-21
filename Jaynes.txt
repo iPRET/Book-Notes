@@ -1,0 +1,1700 @@
+Probability Theory - The Logic of Science by E.T. Jaynes
+  Why this book good?
+    E.Y. says it's sexy.
+  
+  Introduction
+    What does the book claim it's special with?
+      Objectively roasts Frequentists
+        Shows that in many practical applications Bayesianism works and
+        Fequentism doesn't.
+        
+        Shows where Frequentist methods break down.
+        Shows Frequentist methods in many cases are defined without 
+        explanations for why they're like that.
+        
+        Prooves there's only one type of inference, under reasonable claims.
+        Shows statistical methods can be derived from these most basic claims.
+      
+      Avoids working with infinite sets to avoid paradoxes,
+        instead only calculates results as limits of finite systems.
+        
+      Unifies probability theory, statistics and information theory.
+  
+      Doesn't care about classic mathematical rigor but much more about
+        clarity of arguments and
+        practicality.
+        
+        While is much stricter at prooving based on axioms that statistical
+        methods are unique and optimal.
+        
+        (The hype is real)
+      
+  Part 1. Principles and elementary applications
+    1. Plausible reasoning
+      1.1 Deductive and plausible reasoning
+        What are we currently trying to understand at all?
+          What does common sense mean?
+          And how to generalize it?
+          
+        What types of statements does math logic deal with?
+          If 
+            A => B and 
+            A = True
+          Then 
+            B = True
+        
+        What types of statements do people usually use when thinking irl?
+          If 
+            A => B and 
+            B = True
+          Then 
+            A becomes more probable
+          
+          Or
+          If 
+            A makes B more probable and
+            B = True
+          Then 
+            A becomes more probable
+            
+            Example?
+              You live in the same room as Your little brother.
+              Occasionally "Your brother drinks juice in Your room".
+              You come home, and see "some juice spilled on the floor".
+              
+              "Your brother drinks juice in Your room" makes 
+              "some juice spilled on the floor" more likely so 
+              it becomes more likely "Your brother drank juice in Your room".
+              
+              Even when in reality a burglar might have broken into the house,
+              drank some juice, spilled some on the floor, and now is hiding in
+              Your wardrobe, because You came home too early.
+          
+        Does prior information affect reasoning?
+          Yes.
+          
+          Example?
+            If every time You find "some juice is spilled on the floor", a 
+            burglar turns out to have broken into Your house, You wouldn't be 
+            so harsh on Your little brother.
+            
+        In practice even mathematicians always use the probabilistic style of 
+        thinking when
+          figuring out what conjectures/theorems are likely to be true and
+          worth thinking about.
+          
+          How do we know that?
+            Figuring out formal proofs is usually delayed to publication 
+            writing time.
+          
+        Is mathematial implication causation?
+          Nope.
+          How come?
+            It rains => It was cloudy 1 second ago
+            but rain is not the cause of clouds
+          
+          Concrete connection between implication and causation?
+            Causation implies implication, but
+            implication doesn't imply causation.
+      
+      1.2 Analogies with physical theories
+        How do physicists do things in their field?
+          Approximate procedure
+            Someone finds a pattern in some features of the world
+            They write up an idealized model
+            It seems to successully predict something about these features
+            This is considered progress in the field
+            
+            Then use newfound knowledge to find larger patterns
+        
+          How does this relate to understanding common sense?
+            Jaynes claims he'll take a similar approach.
+            Finding small patterns in how probabilistic reasoning seems to 
+            work.
+            Then writing more general models.
+          
+          Why create a model at all?
+            Creating and abstract model of probabilistic resoning would be 
+            useful in cases 
+              which are too complicated to be handled by human reasoning
+              capabilities.
+              
+              Examples?
+                Many propositions or variables.
+                Situations where emotions come into play.
+                Situations where precise estimates are necessary.
+                etc.
+      
+      1.3 The thinking computer
+        Psychologically it's better to think about
+          how to build a thinking computer
+          rather than how to model human common sense
+        because
+          it's hard to think about human common sense without becoming
+          philosophycal and involved in debates.
+            Because human common sense includes a lot of
+            biases and inconsistencies
+              Because the human mind hasn't evolved just for good reasoning.
+      
+      1.4 Introducing the robot
+        Assume we have a robot who can do math logic.
+      
+      1.5 Boolean algebra
+        What's AB mean in bool alg in this book?
+          Both A and B are true
+        
+        What's A + B ...?
+          A or B are true (not xor)
+        
+        What's A = B ...?
+          A and B have the same truth value
+        
+        0th reasonable axiom of possible reasoning?
+          If two statements are mathematically equivalent, their possibilities
+          are equal.
+        
+        What's \overline{A} ...?
+          Not A
+        
+        What's A => B ...?
+          If A is true then B is also true
+        
+        How does possible reasoning improve on mathematical logic?
+          In math if A => B, then we don't get any info about 
+          B if we find out A is false, or 
+          A if we find out B is true.
+          
+          However we know that irl there is some information there.
+          That's what a possible reasoning model could help with.
+        
+        Note
+          Why is "implication" a bad name for "=>"?
+            "A implies B" is sometimes interpreted as "B can be deduced from A"
+            In math "A implies B" just means "If A is true then B is true".
+              e.g. 
+                2 + 2 = 5 => I am the pope, is a math true statement. And
+                2 + 2 = 5 => I am not the pope is a true statement.
+                Because
+                False => False is correct in math
+                False => True is correct in math
+      
+      1.6 Adequate sets of operations
+        Assume we know math logic.
+      
+      1.7 The basic desiderata
+        What's desiderata?
+          Useful quality/property that we would like to have.
+          The author insists on using this word.
+        
+        What does Jaynes define A|B to mean?
+          Possibility of A given that B is true.
+          Corresponds to a real number.
+          A|B has to be defined only if B is possible.
+          
+          Why exactly this definition?
+            We usually we know something about A.
+            We don't reason about abstract symbols we know nothing about.
+            
+            It's still possible to write down the possibility of an event given
+            no observation by writing A|True.
+            
+          Does A|False exist?
+            No. It's not defined.
+          
+          What if A or B is a number?
+            A and B have to be bool statements.
+              Clear enough that they work with bool logic.
+            
+            A or B can be statements like
+              "x has a value a", which is usually meant by authors who write
+            numbers instead of statements.
+            
+            Jaynes says he'll describe how not doing this, actually leads to
+            paradoxes in practical situations in chap 15.
+          
+        Properties we'd like to have for possible reasoning?
+          I Degrees of possibility are represented by real numbers.
+            Why?
+              Jaynes couldn't think of a system without this or a property
+              equivalent in practice.
+              There is also some theoretical requirement or something.
+            
+          The directions of updates correspond to common sense.
+            A bigger possibility will correspond to a bigger number.
+              Why?
+                Convenience, but not necessary
+            
+            A small increase in possibility will cause only a small increase
+            in the number. (i.e. continuity)
+              Why?
+                Convenience, but not necessary
+
+            How does Jaynes understand the word "update"?
+              Moment when we understand that the relevant information for calcing
+              the possibility of statement A is C' instead of C.
+                i.e. We calculate A|C' instead of A|C
+              Usually probably because usually C' = C And "some new statement".
+                
+            If updating C makes B more possible
+              i.e. (B|C') > (B|C),
+            Then (Not B|C') < (B|C),
+              i.e. The opposite of B becomes less possible.
+              
+              Why?
+                Seems quite reasonable
+              
+            If 
+              updating C makes B more possible,
+                i.e. (B|C') > (B|C),
+              and the update doesn't change the possibility of A given B,
+                i.e. (A|BC') = (A|BC),
+            then
+              the information should increase the possibility of (A and B),
+                i.e. (AB|C') >= (AB|C)
+            
+              Why?
+                After thinking of a couple examples seems reasonable
+            
+            
+          Consistency
+            IIIa
+            Any way of calculating the result leads to the same result.
+
+            IIIb
+            Prob theory doesn't guarantee working if not all relevant knowledge
+            is put into condition.
+            
+            IIIc
+            If in two problems the relations are the same except for
+            labeling, any derived results should be the same.
+          
+          Why these properties?
+            Author claims that
+              these properties ~uniquely define a way to handle possibilities.
+        
+        Assume our robot follows these rules.
+        
+    2. The quantitative rules
+      2.1 The product rule
+        What variables go into calculating the possibility of AB|C?
+          AB|C = F(B|C, A|BC) or F(A|C, B|AC)
+          
+          Why?
+            It seems reasonable that the possibility of AB|C can be split
+            into two parts:
+              Calculating the possibility of 
+                B given C 
+              and then taking into account how possible it is we will see 
+                A given B and C happened.
+            
+            Also there was an exhaustive proof by a guy named Cox that showed 
+            other options would absurdly contradict intuition in everyday 
+            situations.
+        
+        When an update C happens such that
+          B|C' > B|C and
+          A|BC' = A|BC and thus
+          AB|C' >= AB|C
+        When does equality happen?
+          When A|BC' = A|BC = impossible.
+          Why?
+            Not explained really, but seems intuitive.
+        
+        When an update C -> C' happens such that
+          B|C' = B|C and
+          A|BC' > A|BC and thus
+          AB|C' >= AB|C
+        When does equality happen?
+          When B|C' = B|C = impossible.
+          Why?
+            Not explained really, but seems intuitive.
+        
+        F is continuous and monotonically increasing on parameters.
+          why?
+            Didn't really understand, but seems reasonable.
+        Except F(x, y) is impossible if x or y is impossible.
+        
+        F(x, F(y, z)) = F(F(x, y), z)
+          Why?
+            (ABC|D) = F(A|BCD, BC|D) = F(A|BCD, F(B|CD, C|D))
+                    = F(AB|CD, C|D) = F(F(A|BCD, B|CD), C|D)
+                    
+          Why is this important?
+            All possible solutions to this equation, given properties of F,
+            are known.
+        
+          What are the solutions?
+            F(B|C, A|BC) = inv(w)(w(B|C) * w(A|BC))
+            w - positive & monotonic function
+            
+            Why?
+              There was an advanced proof using differential equations and
+              math anal.
+              But I didn't relly understand it.
+            
+            Name?
+              Product Rule
+        
+        What's NCC?
+          For shortness I call that number corresponding to cerainty.
+          e.g.
+            (A or Not A|C),
+            (True|C),
+            etc.
+          
+        w(NCC) = 1
+          why?
+            Since equivalent logical statements have the same possibility
+              (0) Take C => A, and thus A|C = NCC, then
+                Because
+                  (C => A) => A = True
+                  True And B = B
+                (1) AB|C = B|C and
+                Because
+                  B And C = True => (C = True) and
+                  C => A
+                (2) A|BC = NCC = A|C
+            AB|C =
+              = F(A|BC, AB|C) = (From 1 & 2)
+              = F(B|C, A|C)
+            (3) i.e. AB|C = F(B|C, A|C)
+            From 3 and Product Rule.
+              w(AB|C) = w(B|C)w(A|C) (Changing LHS from 1)
+              w(B|C) = w(B|C)w(A|C)
+              w(A|C) = 1 (Changing LHS from 0)
+              w(NCC) = 1
+            Q.E.D.
+        
+        What's NCI?
+          -||- Number corresponding to impossibility.
+          e.g.
+            (False|C),
+            (A And Not A|C),
+            etc.
+        
+        w(NCI) = 0 or +inf
+          why?
+            Similar to proof for why w(NCC) = 1
+        
+          What happens if +inf?
+            If one was to assume w(NCI) = +inf instead of w(NCI) = 0,
+            that later turns out to work sort of equivalently.
+        
+            We'll assume w(NCI) = 0, as is traditional.
+            
+    2.2 The sum rule
+      What's the algebraic relation between w(A|B) and w(Not A|B)?
+        w(A|B)^m + w(Not A|B)^m = 1
+        Which are all again sort of equivalent.
+        
+        But because the formulas look simpler, 
+        and by tradition we'll take:
+          w(A|B) = 1 - w(Not A|B)
+        
+        name?
+          Negation rule.
+        
+        why?
+          Algebraic, differential and math anal magic, didn't comprehend.
+      
+      What was all of this fucking around for?
+        It was sort of proved that, 
+          No matter what the mapping from possibilities to real numbers, and
+          as long as it obeys the desiderata,
+          there will exist a function w that maps from the possibility
+          associated real numbers to [0, 1], 
+          Such that the w's can be calculated regardless of the 
+          possibility -> R association. (Which is ~explained later in notes)
+          
+          I'm really not sure if this doesn't cause inconsistencies, like
+          mapping one w value to different possibilities, but not the first
+          thing I don't understand.
+          
+          Also w has the properties:
+            w(number corresponding to True = certain) = 1
+            w(number oorresponding to False = impossible) = 0
+            w(AB|C) = w(B|C) * w(A|BC)
+            w(A|B) = 1 - w(Not A|B)
+            If two statements w(A|C) and w(B|C) are symmetric, w(A|C) = w(B|C)
+          
+          Also calculations with this w(A|B) function in practice works
+          analogously to how people traditionally do calculations with P(A|B).
+            Except w(A|B) work with math statements and P(A|B) with sets.  
+          Thus as is traditional we'll call the w function P(A|B).
+        
+      How to calculate P(A + B|C)?
+        P(A + B|C) = P(A|C) + P(B|C) - P(AB|C)
+        
+        why?
+          Algebraically derivable from negation and product rule.
+      
+      What's mutually exclusive mean?
+        Two of the events cannot be true at the same time.
+      
+      Given all P(subset(Ai)|X), can You calculate any P(f(Ai)|f2(Ai)X)?
+        Yes.
+        How?
+          Worst case:
+          
+          P(f(Ai)|f2(Ai)X) = (Product rule)
+            = P(f(Ai)f2(Ai)|X) / P(f2(Ai)|X)
+          
+          Now the problem has been reduced to calculating two probabilities of
+          form P(f(Ai)|X).
+          
+          Next calculate probabilities of all possible combinations of Ais,
+            e.g. P(A1 And Not A2 And A3 And A4 And Not A5...|X),
+          (Which is possible using the product and negation rules).
+          
+          Next write f(Ai) as a sum of all the relevant combinations of Ai.
+          
+        In practice, usually there are other ways of getting the result faster
+        and without knowing all the P(subset(Ai)|X) values.
+      
+    2.3 Qualitatitive properties
+      Does implication make sense using Ps?
+        Yes?
+        
+        Why?
+          Does knowing A in implication still imply B?
+            C = (A => B)
+            P(B|AC) = P(AB|C) / P(A|C)
+            C => AB = A
+            P(B|AC) = P(A|C) / P(A|C) = 1
+        
+          Does knowing B is False imply A is False?
+            C = (A => B)
+            P(A|Not B and C) = P(A And Not B|C) / P(Not B|C)
+            C => A And Not B = False, i.e. is impossible assuming A => B
+            P(A|Not B and C) = P(False|C) / P(Not B|C) = 0
+      
+      Does the statement 
+        "If A => B, then (if B = True then A becomes more possible)"
+      work?
+        Yes.
+        
+        Why?
+          C = (A => B)
+          P(A|BC) = P(AB|C) / P(B|C)
+          C => AB = A thus
+          P(A|BC) = P(A|C) / P(B|C)
+          1 <= 1 / P(B|C)
+          So P(A|BC) >= P(A|C)
+            i.e. Knowing that B is true, makes A|BC more likely.
+      
+      Does the statement A => B, thus if A = False then B is less possible 
+      work?
+        Yes.
+        
+        Why?
+          (1) C = (A => B)
+          P(B|Not A and C) = P(Not A and B|C) / P(Not A|C) (Prod. rule)
+          (2) P(B|Not A and C) = P(B|C) * P(Not A|BC) / P(Not A|C)
+          Since ((A => B) => P(A|BC) >= P(A|C))
+            P(A|BC) >= P(A|C) => (Negation rule)
+          1 - P(Not A|BC) >= 1 - P(Not A|C) =>
+          P(Not A|BC) <= P(Not A|C) =>
+          P(Not A|BC) / P(Not A|C) <= 1 => (From dividing 2)
+          P(B|Not A And C) <= P(B|C)
+          Q.E.D.
+      
+      Does the statement 
+      (Seeing A makes B more possible, thus seeing B makes A more possible)
+        i.e. 
+        (0) P(B|AC) > P(B|C) => 
+        P(A|BC) > P(A|C)
+      work?
+        Yes.
+        
+        Why?
+          From prod. rule:
+          P(A|BC) = P(AB|C) / P(B|C) => (Prod rule)
+          (1) P(A|BC) = P(A|C) * P(B|AC) / P(B|C)
+          From given:
+          P(B|AC) > P(B|C) =>
+          (2) P(B|AC) / P(B|C) > 1
+          From 1 and 2
+          P(A|BC) > P(A|C)
+          Q.E.D.
+        
+        Interesting memes from looking at formula 1.
+          If seeing A makes B only slightly more likely, then seeing B makes
+          A only slightly more likely.
+            i.e. (3) P(B|AC) = P(B|C) + eps1 => P(A|BC) = P(A|C) + eps2
+            
+            Why?
+              Formula 1:
+              P(A|BC) = P(A|C) * P(B|AC) / P(B|C) => (From 3)
+              P(A|BC) = P(A|C) * (P(B|C) + eps1) / P(B|C) =>
+              P(A|BC) = P(A|C) * (1 + eps2) =>
+              P(A|BC) = P(A|C) + P(A|C) * eps2 =>
+              P(A|BC) = P(A|C) + eps3
+              Q.E.D.
+            
+            e.g?
+              Eating at McDonalds makes it slightly more likely a person will 
+              become overweight.
+              So knowing someone's overweight makes it slightly more likely
+              they eat at McDonalds, but not by a lot.
+              
+              If a person is gay, it makes them slightly more likely to talk
+              about gay shit.
+              So knowing someone talks about gay shit, makes them more likely 
+              to be gay, but not by a lot, because the possibility of someone
+              talking about gay shit is high anyway.
+          
+          What's another interesting meme is that the preivous effect always
+          makes A more likely, never less likely, if it was possible at all.
+          
+          For A to increase a lot when B is observed, it is necessary but not
+          sufficient for P(B|C) to be small
+            i.e. P(B|C) ~= 1 => P(A|BC) ~= P(A|C)
+            Why?
+              If P(B|C) ~= 1 =>
+              P(B|AC) / P(B|C) ~= P(B|AC)
+              P(B|AC) > P(B|C) =>
+              P(B|AC) ~= 1 =>
+              P(B|AC) / P(B|C) ~= P(B|AC) ~= 1 => (From 1)
+              P(A|BC) ~= P(A|C)
+          
+            e.g.?
+              A person who's religious would definitely cellebrate christmas,
+              Yet nearly everyone cellebrates christmas, so You get nearly
+              no information on whether they're religious.
+              i.e.
+                Assume
+                  A = Religious
+                  B = Cellebrates X-mas = X-mas
+                  
+                  P(Religious|C) ~= 0.1
+                    i.e. Default chance of being religious
+                  P(X-mas|Religious and C) ~= 1.0
+                    i.e. Chance of cellebrating x-mas given religious
+                  P(X-mas|C) ~= 0.99
+                    i.e. Default chance of cellebrating x-mas
+                Then
+                  P(Religious|X-mas and C) = P(Religious|C) *
+                    P(X-mas|Religious and C) / P(X-mas|C) =>
+                  
+                  P(Religious|X-mas and C) = 0.1 * 1.0 / 0.99 ~=
+                    = 0.1 * 1.01 ~= 0.101
+          
+              Seeing that someone breaks a window is very rare, so it gives
+              You a lot of information on whether the person should be
+              arrested.
+                i.e.
+                  Assume
+                    A = Vandalized someone's property = Vandal
+                    B = Broke a window = Broke
+                    
+                    P(Vandal|C) ~= 0.0001
+                      i.e. Chance of being a Vandal.
+                    P(Broke|Vandal and C) ~= 0.05
+                      i.e. Chance of breaking a window given a vandal.
+                    P(Broke|C) ~= 0.00001
+                      i.e. Chance that someone would break a window.
+                  Then
+                    P(Vandal|Broke and C) = P(Vandal|C) *
+                      P(Broke|Vandal and C) / P(Broke|C)
+                      
+                    P(Vandal|Broke and C) = 0.0001 * 0.05 / 0.00001
+                    = 0.0001 * 5000 = 0.5
+                  
+                  The rarity of the event made the possibility increase 5000
+                  times.
+                  I made these numbers up to illustrate the idea.
+              
+          Many more memes like this that make intuitive sense can be derived
+          from the formula.
+          
+    2.4 Numerical values
+      P of Or of mutually exclusive events?
+        P(A1 + A2...|C) = Sum(P(Ai|C))
+        
+        Why?
+          repeated application of sum rule.
+      
+      The problem of intuition in math?
+        In some new fields of math, at first intuition might be a lot easier to
+        use that the logical tools of the field.
+        So people get used to relying on intution for everything in the field.
+        
+        Because people don't usually know when intution breaks down, they apply
+        intution where it doesn't work, which is a problem.
+      
+        This sometimes leads to math people arguing over their intuitions 
+        instead of the math.
+      
+      Jaynes says: "Please use only logic in the next couple points not 
+      intution, thx."
+      
+      What's the principle of indifference?
+        Imagine evaluating probabilities P(A1|B), P(A2|B)...
+        If B doesn't say anything about Ai as compared to Aj,
+          i.e. We could relabel Ai <- Aj; Aj <- Ai, and get the same problem.
+        Then from desideratum IIIc
+          The possibilities of Ai and Aj should be equal.
+        
+        If A1...An have same info, then
+          P(Ai) = 1/n for all i.
+        
+        Applications?
+          If You don't have any information about one option as compared to
+          another, assuming correct axioms/desiderata, it's math necessary to
+          assume equal possibilities for both.
+      
+          Say You're in a foreign city, and taking a walk with friends.
+          You're not sure which path would be more interesting, the one on the
+          right or one on the left.
+          From symmetry, both have the exact same possibility of being the most
+          interesting, given Your information.
+          
+          A die roll has a 1/6 chance of landing on any face, if it's a regular
+          die, that's not rigged.
+      
+      What does Jaynes call a probability? 
+        P(A|B)
+        But not A|B
+        
+      Conjunction?
+        Analogue of and gate
+      
+      Disjunction
+        Analogue of or gate
+      
+      Disjunction inequality for two statements?
+        P(A+B|C) >= P(A|C) and
+        P(A+B|C) >= P(B|C)
+        And if P(A|C) + P(B|C)
+        P(A+B|C) <= P(A|C) + P(B|C)
+        P(A+B|C) <= 1
+        Why?
+          Algebramagic. From previous properties.
+          
+      Conjunction inequalities for two statements?
+        P(AB|C) <= P(A|C) and
+        P(AB|C) <= P(B|C)
+        And if P(A|C) + P(B|C) > 1:
+        P(AB|C) >= P(A|C) + P(B|C) - 1
+        P(AB|C) >= 0
+        Why?
+          Algebramagic. From previous properties.
+      
+    2.5 Notation and finite-sets policy
+      What does it mean when an author writes P(q|B), where q is a number?
+        Usually it means P(A|B), where A = the value of some var x is q.
+        Usually this is done to try to make a function that returns 
+        probabilities.
+        
+        Jaynes say that in using the notation P(q|B) can lead to "paradoxes",
+        which will be described in chap 15.
+        
+        How does Jaynes denote probabilities that depend on values?
+          e.g.
+            f(q|p) = P(Q|P),
+              where Q = var x has val q, and 
+            P = var y has val p
+      
+      What's the finite-sets policy?
+        @I'm not completely sure
+        I should update this after reading chap. 15
+        
+        When You want to work with 
+          an infinite amount of anything,
+          an infinitely small amount of anything,
+          continuous things,
+        first create a process of building larger and larger finite systems,
+        and see whether it converges to a system with the properties desired.
+        This is called the limiting process.
+      
+        If it doesn't converge, don't use it.
+      
+        Don't try to work with the limit results without thinking of the 
+        limiting process.
+
+        When can the limiting process be ignored?
+          If there's some standard situation where it's been proven the limit
+          doesn't have to be verified.
+            @Need more e.g.
+            e.g.?
+              Addition of convergent series stays convergent.
+            anti e.g.?
+              Addition of series that are not known to converge.
+        
+        Why use it?
+          In practice the finite sets policy doesn't make errors,
+          while working with inifinities makes a lot of "paradoxes".
+          
+          This is because
+            Not clearly defining the limit process can lead to intuitively 
+            using defferent limiting processes.
+            This can lead to different results, and seeming paradoxes.
+          
+          e.g.?
+            Integrating notation doesn't contain descriptions of the limiting
+            processes, which I know in my experiencem leads to a ton of 
+            confusion and apparent inconsistencies.
+            
+            People arguing about whether 1 - 1 + 1 - 1... = 0, 0.5, 1 or non
+            existant.
+      
+    2.6 Comments
+      How does Jaynes use the words Subjective and Objective in this book?
+        Subjective - Something that represents partial knowledge about a thing.
+          i.e. Any probability not 0 or 1.
+        Objective - Something independant of personality.
+          i.e. something that correctly uses the axioms/desiderata.
+          Why like this?
+            Objectivity is associated with science.
+            If we had this definition it would be easier to cooperate.
+        
+        So You can be both at the same time.
+      
+      What does it mean for a system of axioms to be inconsistent?
+        Statements A and Not A can both be derived.
+      
+      What does Godels theorem approx say?
+        (1) A set of axioms cannot proove itself consistent, 
+          because if it were inconsistent You could derive any statement 
+          including "This set is consistent"
+        So You cannot be certain whether "This set is consistent" is
+        drived because it's an inconsitency or because it actually is 
+        consistent.
+        
+        An algorithm that can be prooven
+          would find an inconsistency in finite time, 
+            if one existed, 
+        does not exist.
+        Because otherwise it could proove its own consistency, which is against
+        (1).
+        
+        Jaynes says that since, to calculate P(A|E1E2E3...) E1E2... must be
+        possible, i.e. consistent, if prob theory is consistent.
+        So it can proove consistency of statements E1...En, assuming prob 
+        theory correct.
+        Which doesn't break Godels theorem because it doesn't proove prob
+        theory is consistent.
+        
+        But I really really didn't understand.
+      
+      Problems with using Venn diagrams?
+        Defining probability theory on statements and beliefs is more general
+        than "defining" using Venn diagrams.
+        When drawing a Venn diagram one intuitively assumes:
+          Probabilities are defined over sets.
+          Connection between area an probability.
+          A point on the diagram corresponds to a possible elementray event.
+          Maybe some probability associated with an elementary event.
+        This does makes sense when working with statements about sets or areas.
+        But can be ineffective and confusing otherwise.
+        
+        e.g. 
+          Assume You have a complex system of interconnected logical knowledge
+          propositions. Where only some states of knowledge seem likely or
+          worth considering.
+          
+          Then,
+            A multidimensional Venn diagram would be hard to imagine.
+            Venn diagrams ~sort of force You to consider all combinatinons of
+            propositions, not just the likely or possible ones.
+            It would be quite hard to add more propositions/knowledge to the
+            graph.
+          
+          Meanwhile just interpreting stuff as equations Always works.
+          i.e. It's kind of more general than just thinking about sets.
+    
+    Appendix A
+    
+      How does Jaynes's system compare to KSP?
+        KSP?
+          Kolmogorov System of Probability
+        
+        Not completely sure, but Jaynes says something among the lines of:
+          KSP is defined around Or gates and sets, which makes it harder to 
+          work with states of knowledge, because
+            A state of knowledge is usually defined as a set of facts about
+            prepositions that are all true through And gates not Or gates.
+            Also adding a new piece of knowledge is harder to intuitively
+            interpret in terms of sets.
+          
+          The Jaynes system can just put any knowledge C in P(A|C), be it
+          defined using Or gates or And gates.
+          
+          The Jaynes system is slightly more complicated to use when working 
+          with infinite sets.
+        
+      How does Jaynes's system compare to dFSP?
+        What's dFSP?
+          de Finetti's System of Probability.
+          
+        Not completely sure, but, i think, Jaynes approximately says:
+          The desiderata of consistency IIIc, is more general than de Finetti'a
+          axiom of "not losing any game".
+           
+          dFSP like KSP assumes probability to be defined on sets.
+            So inherits a lot of KSPs problems
+          dFSP works with infinite sets.
+            It causes a buch of infinite set paradoxes, that are patched using
+            weird math like zeros of different size.
+        
+          In dFSP it's harder to deduce prior probabilities than in Jaynes's
+          system.
+          Instead dFSP assumes more that prior probabilities are known.
+      
+      Why did we assume real numbers for possibilities?
+        Really not sure, but Jaynes says something like:
+          If possibilities weren't assigned real numbers,
+            For practical purposes we'd need to assume possibilities are
+            comparable and transitive.
+            
+            Which at the limit of knowing all comparisons for an arbitrarily
+            large set of propositions is equivalent to being assigned
+            real numbers.
+          
+          But it might bring practically useful results to study what happens
+          when the comparisons are sparse, to model how humans think.
+    
+    Chapter 3 Elementary Sampling theory
+      Jaynes says pretty much all of statistics can be derived from the
+      principle of indifference.
+      That's what the next 7 chapters are about.
+      
+      Why does it not make sense to think of probability as a property of a
+      system?
+        If You look at the same system, depending on Your knowledge, Your
+        probabilities will be very different:
+          e.g.?
+            C = 
+            Imagine an urn with N white balls, and 10 - N black balls.
+            And a perfect robotic arm pulling them out from an urn.
+            Where N is chosen uniformly from 0 to 10.
+            
+            What interests You is
+            W = The first ball pulled out being White.
+            
+            Scenario 1:
+              You don't know anything appart from C.
+              Given Your knowledge P(W|C) = 0.5
+            
+            Scenario 2:
+              D = You also know that N was chosen to be 8.
+              Given Your knowledge P(W|CD) = 0.8
+            
+            Scenario 3:
+              E = You know N is 8.
+                You also looked into the urn, and know how the robot arm 
+                will move.
+                So You're certain the first ball will be white.
+              Given Your knowledge P(W|CE) = 1.0
+            
+            The probability of the exact same physical system differs only
+            based on Your knowledge, so it doesn't make sense to interpret
+            probability as a physical property, instead of a state of
+            knowledge.
+          Not thinking this way makes it very awkward analyzing these
+          situations.
+      
+      Assume we have an urn with w white and b black balls. How to calculate
+      the probability of pulling out some permutation of n <= w + b balls?
+        Assuming 
+          pw = white balls in permutation
+          pb = black balls in permutation
+        
+        Possibility of all possible permutations for same pw and pb is equal.
+          (This is not an assertion, this can be proven)
+        P(...) = w! b! (w + b - pw - pb)! / ((w + b)! (w - pw)! (b - pb)!)
+       
+        why?
+          Can be proven using
+            Product rule,
+            Algebraic magic,
+            induction,
+            principle of indifference
+      
+      Assume an urn with w white, and b black balls. How to calculate the
+      probability of pulling out exactly pw white balls when drawing 
+      n balls?
+        pb = black balls in draw
+        
+        There are 
+          choose pw of n = n! / (pw! pb!) 
+        possible options, of how this might happen.
+        
+        From previous result and the fact that pw and pb is the same for all
+        of these options, the probability is
+          P(...) = w! b! (w + b - pw - pb)! / ((w + b)! (w - pw)! (b - pb)!) *
+            * n! /(pw! (n - pw)!) =
+            = Choose pw of w * Choose pb of b / Choose (pw + pb) of w + b
+        
+        Name of this function?
+          hypergeometric distribution
+        
+        Traditional notation?
+          h(pw|N, w, n) = choose pw of w * Choose (n - pw) of (N - w) /
+            / Choose n of N 
+          Where
+            N = w + b
+          
+          Interpretation?
+            "Probability of getting exactly pw positive samples in n draws, if 
+            the population contains N samples, w of which are positive."
+      
+        What's the most probable value of pw for h?
+          pw_max = floor((pw + pb + 1) * (w + 1) / (w + b + 2))
+          i.e. the one closest to n * (w / N)
+          
+          Why?
+            Algebramagic.
+        
+        Symmetries?
+          If pw is swapped with pb, and w is swapped with b, nothing changes.
+          
+          Non obvious fact:
+            Swapping the number of draws with the number of white balls, but
+            recaluclating everything so that N the same, gives
+            equal probabilities for different pw.
+            
+            From symmetry same goes for black balls.
+      
+      What's probability distribution function?
+        function that returns some probability from a system of statements.
+        Where the system depends on the numbers passed to the function.
+        
+        I'm not sure, but Jaynes calls both probability distribution funcs
+        and probability density funcs probability distribution funs.
+      
+      What's a cumulative probability distribution function?
+        Probability that the value of a variable is less than x.
+          In the discrete case:
+            a function H(x) = sum h(y), where y <= x
+        
+      What's a median?
+        The point where H(x) = 0.5
+        
+        in practice?
+          point where H(x) is closest to 0.5
+      
+      A useful method that often works, when You need to find the probability
+      of a statement You don't know:
+        Try to split a statement into mutually exclusive sub statements.
+        Calculate their probabilities according to sum and product rules.
+      
+      3.2. Logic vs. propensity
+        Can knowing things that will happen in the future affect the
+        probability of what will happen now?
+          Yes.
+          Why does Jaynes think so?
+            Possible reasoning, is only about logical connections.
+            The underlieing causal structure of the universe doesn't matter.
+          
+          e.g.
+            C = A robot arm is pulling out balls from an urn with 1 white 
+            and 1 black balls.
+            
+            You're interested in 
+              A = The probability of the first ball being white.
+            
+            Scenario 1:
+              You know only C.
+              P(A|C) = 0.5
+            
+            Scenario 2:
+              D = The designer of the system says, he ran an experiment,
+              and he knows the last ball the robot will take out will be white.
+              P(A|CD) = 1.0
+          
+        Bernulli urn time symmetry?
+          Knowing the outcome of a ball in the future has the same impact as
+          knowing the outcome of a ball from the past.
+        
+        Is it worth interpreting P(A|B) as B causing A?
+          No.
+            e.g.
+              A = Spilling tea on the ground
+              B = There being tea on the ground
+              A causes B
+              But knowing B makes A much more likely
+                i.e. P(A|C) < P(A|BC)
+              
+              And it's a perfectly fine way of reasoning, even if B didn't
+              cause A.
+            
+            e.g. previous bernulli urn example.
+        
+        What's an exchangable distribution?
+          A probability distribution function that has multiple parameters, 
+          and the result of the function doesn't depend on the order of those 
+          parameters.
+          
+          E.g.
+            The probability function You get when You have an urn with balls,
+            and You look at the probability a permutation of drawn balls
+            comming out as x1, x2, x3...
+              i.e. f(x1, x2, x3...|C)
+          
+      3.3. Reasoning from less precise information
+        Mindfuck.
+        
+        If You have an urn with b and w balls.
+        And know that the nth draw is white,
+          that decreases the probability of 1st being white.
+        But knowing one of multiple future draws is white,
+          decreases the probability of 1st being white by a lot less.
+          
+          e.g.
+            w = 2, b = 2,
+            Wx - statment that x-th draw is white.
+            
+            P(W1|W4 C) = 1 / 3 < P(W1|(W3 Or W4)C) = 2 / 5
+        
+        
+      3.4. Expectations
+        Expectation definition?
+          Notation?
+            E(X)
+              or
+            <X>
+          
+          Prerequisites of X
+            X is some math object dependent on the truth/false values of a 
+            system of statements, that are probabilistic.
+            X can take on some set of values {xi}.
+          
+          Value?
+            E(X):= <X>:= sum(xi * P(xi|C))
+          
+          Why is expected value possibly a bad name?
+            In human language "Expected value" could be interpreted like
+            "Value that is very likely/most likely to be seen".
+            
+            But by the math definition, in pretty much all cases that's not 
+            true.
+        
+          Why is expectation important at all?
+            Well Jaynes says:            
+            
+            In many problems a probability of interest equals an expectation 
+            of some probability distribution, or fraction of probability 
+            distributions.
+            
+            e.g.
+              C = Bernulli urn example. w, N.
+              
+              Say we want to know whether 
+                A = 1st ball will be white
+              And we know
+                B = something we know about probabilities of other balls,
+                  or gate of exclusive statements Bi = "later balls xi, xj...
+                  will be respectively w/b, w/b...."
+              
+              Then
+                P(A|BC) = Sum P(A|BiC)P(Bi|C) = 
+                = Sum ((w - count w in xi...) / (N - count xi...)) * P(Bi|C)
+                = E((w - count w in xi...) / (N - count xi...))
+                Which is an expectatoin of a fraction
+                
+                p.s. The "count w..." is a prob distribution function, and
+                should be written something like f(w|Bi) or something like
+                that.
+            
+      3.5 Other forms and extensions
+        What's generalized hypergeometric distribution?
+          Sounds like something from sci-fi
+          
+          probability distribution function
+            f(w1, w2, w3...|W1, W2, W3...)
+            Assuming a bernulli urn with Wi balls of color i, probability
+            of pulling out exactly wi balls of color i.
+          
+          Calculate how?
+            Product(Choose (wi of Wi)) / Choose(sum(wi) of sum(Wi))
+            
+            Proof?
+              Induction 
+                look at what happens if You split Wn into two new colors 
+              and product rule.
+      
+      3.6 Probability as a mathematical tool
+        Probability theory can be useful for getting identities in
+        combinatorics.
+      
+      3.7 The binomial distribution
+        What happens to the hypergeometric distribution, as
+          pw, pb - stay the same,
+          w, b -> inf, and
+          w/(w + b) -> c
+        ?
+          c^pw * (1 - c)^pb * choose pw of pw + pb
+          
+          name?
+            Binomial distribution
+            
+            official notation?
+              b(pw|n, f)
+          
+          why?
+            Just caluclate the limit, unpacking some of the factorials.
+        
+          What hapens to the generalized hypergeometric distribution?
+            Choose w1, w2,... of Sum(wi) * prod(fi^wi)
+              Where fi - proportion of wi colored balls.
+        
+      3.8 Sampling with replacement
+        3.8.1 Digression a sermon on reality vs. models
+          How do some prob theory writers usually get rid of knowledge that 
+          makes calculations too complicated?
+            Add a lot more knowledge, which makes the calculation much more 
+            complicated.
+              e.g. 
+                When drawing balls from an urn and placing them back in, 
+                shake the urn between draws.
+            Claim that the problem is now equivalent to a simpler problem.
+              e.g.
+                Say we have uniform probability over all balls in the urn.
+            Call the process randomization.
+            
+            Why is this not correct?
+              Information from a previous draw might still be useful, to
+              a computer that knew precise shaking movements, and
+              understands quantum effects, 
+                i.e. With some enormous amount of compute, it could have
+                better knowledge than uniform.
+            
+            Why does this sort of work?
+              In practice at least no human is capable of taking into account 
+              the knowledge of a lot of shaking in a way that causes a huge 
+              deviation from uniform probability.
+            
+            Why is this important at all?
+              It's probably not really important. 
+              This is mostly to rek frequentists,
+              with probably no practical applications.
+              
+              The fact that randomization works/exists,
+              doesn't come from the axioms of math, it's an approximation,
+              so there might be extreme situations where it breaks down.
+              Like when taking limits.
+              
+              Which means You can't prove frequentism's most fundamental
+              theorem, that probability is the frequency in the limit of
+              repeated independent trials.
+              
+              And because randomization is just a mental approximation not 
+              something that exists in the world, it's wrong to say that one's
+              measuring the probability as a property of the system.
+              Which is what frequentists say all the time. Which is the mind
+              projection fallacy.
+          
+        3.9 Correction for correlations
+          A more appropriate name for this chapter would be:
+            Brutal rekt of frequentism.
+            Just hands down.
+          
+          Practical proof randomization doesn't work in the limit?
+            Imagine a bernulli urn, with repeated samples with replacement and
+            randomization.
+            
+            Because randomization doesn't exist. In practice usually, there
+            will be some correlation between color of ball currently drawn,
+            and color of ball drawn and the color of the previous ball.
+            Assume the correlation with balls before the last ball are
+            negligible.
+              i.e.
+                Xi - event that Xi's draw is of color X.
+                P(Xk+1|Xk C) = P(X1|C) + eps
+            Usually the correlation is small 
+              i.e. eps <= 0.01
+            Let's say
+              P(Wk+1|Wk C) = p + eps1
+              P(Bk+1|Bk C) = 1 - p + eps2
+            Then
+              P(Wk+1|Bk C) = p - eps2
+              P(Bk+1|Wk C) = 1 - p - eps1
+            
+            For i > 1
+            The probabilities P(Wi|C) and P(Bi|C) will be a linear combination
+            of P(Wi-1|C) and P(Bi-1|C).
+            So we got the matrix equation
+            [P(Wi|C), P(Bi|C)] = 
+              next_step ^ (i - 1) * 
+              [P(W1|C), P(B1|C)]
+              where next_step is the matrix
+                [[p + eps1, p - eps2], [1 - p + eps2, 1 - p - eps1]]
+            
+            The matrix next_step ^ (i - 1) can be expressed as
+              S ^ -1 * Eig ^ (i - 1) * S,
+              where S is the matrix that transforms a vector to eigenvector
+              coordinates.
+            
+            The matrixes can then be opened to get a neat formula with
+            exponentials. I'm too lazy to calculate it tho.
+            
+            But the thing is, that as i goes to infinity
+            P(Wi|C) doesn't converge to P(w1|C) = p, but to some weird
+            fraction (p - eps1) / (1 - eps1 - eps2).
+            
+            Which literally means the frequentist interpretation that 
+              "the probability tends to the fraction of observations as 
+              observations tend to infinity."
+            is literally always wrong, because randomization doesn't exist.
+            
+            This can cause legitimate problems in experiments if n * eps ~> 1.
+            
+        3.10 Simplification
+          What's inference time symmetry?
+            P(Aj|Ai C) = P(Ai|Aj C).
+          
+            What does P(Ai|C) = p tell about inference symmetry?
+              It's true.
+              
+              Why?
+                Product rule.
+          
+        3.11 Comments
+          The urn derivations can be by a small stretch generalized to a lot of
+          experiments, than can have similar correlation effects.
+          
+          Where the urn analogy might not cut it?
+            In experiments where 
+              the data doesn't resemble anything like a population, or
+                e.g.
+                  Flipping a coin,
+                  Measurements of physical systems,
+                  Anything related to timeseries
+              if the data might change over time.
+                e.g.
+                  Temperature or wind measurements,
+                  Anything related to timeseries
+          
+            Interpreting the expriments as equivalent to urns can put a mental
+            block on looking at information, which might be useful to us, not 
+            describalbe by an urn analogy, like changes over time.
+          
+          3.11.1 A look ahead
+            Sampling theory is mostly concerned with the questions, given a
+            hypothesis for the distribution, what is the probability of seing
+            some data?
+            
+            However in real life prob theory problems are usually in the form: 
+            given some data, what is the probability of a hypothesis being
+            correct?
+            
+            Jaynes says he'll nearly exclusively focus on the second problem.
+            
+      4.Elementary hypothesis testing
+        4.1 Prior probabilities
+          What's prior information?
+            In Jaynesean prob theory:
+              All information an agent has other than the information stated 
+              in the problem(D) it's solving.
+            
+            What's the X in Jaynesean prob theory?
+              Jaynes denotes prior info with X.
+            
+            Are D and X fundamental concepts?
+              It's more just useful organization in some problems.
+              How X and D are divided should theoretically chance the result.
+          
+          What's a prior probability?
+            Probability of something before taking into account any information
+            from a problem.
+              i.e. P(H|X)
+          
+          What's a posterior probability?
+            Probability calculated after taking data into account.
+              i.e. P(H|DX) as compared to P(H|X)
+          
+          Why are prior and posterior probs useful?
+            They're just nice names that help talk about bayeses formula.
+          
+          Why do frequentist stats struggle with getting H from D?
+            Since we know
+              P(H|DX) = P(H|X) P(HD|X) / P(D|X)
+            To get P(H|X) and P(D|X), some prior probabilities P(H|X) must be
+            figured out.
+            Setting them is hard to justify in in frequentism.
+            
+            How can this be solved?
+              In Jaynesean statistics, simply calculate P(H|X) from the prior
+              info X, and calculate P(H|DX) as usual.
+          
+          What's a likelihood?
+            Any function of the form
+              L(H) = P(D|HX) * f(D)
+            
+            Why is this important?
+              It's used in the next chapter I think
+          
+        4.2 Testing binary hypotheses with binary data
+          What's a binary hypothesis?
+            You got two options either H or not H.
+          
+          What are odds?
+            For a binary hypothesis H.
+            O(H|DX) = P(H|DX) / P(not H|DX)
+          
+          Bayes formula for odds?
+            O(H|DX) = O(H|X) * P(D|HX) / P(D|(not H)X)
+            
+            Why?
+              P(H|DX) = P(H|X) P(HD|X) / P(D|X)
+              P(not H|DX) = P(not H|X) P((not H)D|X) / P(D|X)
+              Dividing them You get what You want.
+            
+            Why is this important?
+              O(H|DX) or P(H|DX) can be calculated without knowing P(D|X).
+              Because P(H|DX) = O(H|DX) / (1 + O(H|DX))
+                (Can be prooven algebraically)
+              So You only need P(H|X), P(not H|X), P(D|HX) and P(D|(not H)X)
+                or O(H|X) and P(D|HX), P(D|(not H)X)
+            
+          What's evidence?
+            Logarithm of odds.
+            e(H|DX) = log2(O(X|DX))
+            
+            Bayes formula for evidence?
+              e(H|DX) = e(H|X) + log2(P(D|HX) / P(D|(not H)X))
+              
+              why is this important?
+                Evidence caluclations can be quite easily done in Your head.
+                Because addition is easier than multiplication.
+                
+                E.g?
+                  What's the probability of electi
+          
+          What's logical independence under H?
+            P(Di|DjHX) = P(Di|HX)
+          
+          How to do evidence calc multiple tests?
+            If the data D = D1D2D3..., then
+              e(H|DX) = e(H|X) + log2(P(D1D2D3...|HX) / P(D1D2D3...|(not H)X))
+              Using product rule and logarithm properties, this can be reduced to
+              e(H|DX) = e(H|X) + log2(P(D1|D2D3...HX) / P(D1|D2D3...(not H)X)) +
+                log2(P(D2|D3D4...HX) / P(D2|D3D4...(not H)X)) + ...
+              For many experiments knowing Di doesn't affect Dj, if we already
+              also know H or (not H). So the formula can be simply rewritten as:
+              e(H|DX) = e(H|X) + log2(P(D1|HX) / P(D1|(not H)X))
+                + log2(P(D2|HX) / P(D2|(not H)X)) + ...
+            
+            Why is this important?
+              Assuming logical independence under H. You can intuitively quite
+              easily just add evidence bits to calculate real probabilities.
+            
+            Example of calculation?
+              W - Person is a weeb
+                e(W|X) = ~3%(based on google search) - 1:32 - -5 bits
+              nW - Person is not a weeb
+              
+              J - Person goes to Japan
+                I'd say a Person, who weeb is probably 10 times more likely to
+                go to Japan than a regular human.
+                log2(P(J|WX) / P(J|nWX)) = log2(10:1) ~= 3 bits
+              
+              L - Person studies Japanese
+                I'd say a Person, who weeb at least 100 times more likely to
+                study Japanese than a regular human.
+                log2(P(L|WX) / P(L|nWX)) = log2(100:1) ~= 6.5 bits
+              
+              D - Person has a daki
+                I'd say a Person, who weeb, at least 1000 time more likely to
+                have a dakimakura for Whatever Reason. Otherwise they'd throw 
+                it out ffs.
+                log2(P(D|WX) / P(D|nWX)) = log2(1000:1) ~= 10 bits
+              
+              A - Person watches asian porn
+                I'd say a Person, who weeb, prolly like twice as likely to watch
+                asian porn on the regular.
+                log2(P(A|WX) / P(A|nWX)) = log2(2:1) ~= 1 bits
+              
+              P - Person is a programmer
+                I'd say a Person, who weeb, like 10 times as likely to be
+                antisocial and a programmer, than a regular person.
+                log2(P(P|WX) / P(P|nWX)) = log2(10:1) ~= 3 bits
+              
+              not N - Person watches anime
+                I'd say a Person, who weeb, is like 1000 times less likely to
+                not watch anime as a regular person.
+                ~= 10 bits
+              
+              Raity - event where person has the setup - JLDAP(not N)
+              Now, if we add up all the evidence
+                e(W|RarityX) = -5 + 3 + 6.5 + 10 + 1 + 3 - 10 = 8.5 bits
+                ergo
+                P(W|RarityX) ~= O^-1(350:1) ~= 99.7 %
+                
+                So Raity You're fooling no one.
+          
+        4.3 Nonextensibility beyond the binary case
+          How to generalize the binary hypothesis testing case?
+            The case when choosing between one of n > 2 hypotheses in general
+            doesn't have an as easy to calculate solution as the binary case.
+              Problems with n > 2 exclusive hypothesis testing?
+                Logical independence
+                  i.e. P(Di|Dj(not H)X) = P(Di|(not H)X)
+                cannot in general be assumed.
+                  Why?
+                    doing a simple example shows it just doesn't work.
+              
+                Lack of logical independece leads to evidence not being easy to
+                simply add like in the binary case.
+            
+            The probabilities can still be calculated, it's just harder.
+                
+          What's the connection between causal link and logical independence?
+            There isn't one.
+            logical independence doesn't imply no-causality
+              e.g. 
+                in general P(Di|Dj (not H)) != P(Di|(not H)) for multiple
+                hypotheses, even if there is no causal link.
+            and a causal link doesn't imply logical dependence
+              e.g. 
+                Agen't doesn't have a way of modeling causality in H or X.
+          
+        4.4 Multiple hypothesis testing
+          Intuitive example of why evidence should work differently in
+          multiple hypothesis testing?
+            X - There's a machine that spits out widgets.
+            Imagine there are two hypotheses.
+              H1 - This is the Mk1 model that produces 1/3 broken widgets.
+              H2 - This is the Mk2 model that produces 1/6 broken widgets.
+              P(H1) = 1/2
+              P(H2) = 1/2
+              
+            From binary hypothesis testing seeing a broken widget increases
+            the evidence of H1 by 1 bit.
+            
+            Now say You've seen 100 broken widgets in a row.
+            That would make the O(H1) ~= 10^30:1.
+            
+            Any reasonable human would think there's likely a third hypothesis
+              H3 - The machine is broken and produces only broken widgets.
+            which has a low probability
+              P(H3) = 10^-5
+            
+            In the beginning it makes sense that P(H1) increases as we observe 
+            more broken widgets.
+            But at some point the probability that the machine is just broken
+            should become much more likely than H1.
+            
+            So intuitively in general
+              the gain/loss of H1 evidence should depend on other evidence
+              evidence.
+              
+            So that's why the simple binary solution doesn't generalize.
+            
+            It is still possible to calculate P(Hi), it's simply a bit harder.
+          
+          How to calculate the prob of one of multiple exclusive hypothesis 
+          under some data?
+            D - D1D2...
+            Assuming logical independence
+              i.e. P(Dk|DjHi) = P(Dk)
+            e(Hi|D) = e(Hi) +
+              log2(prod(k)(Dk|HiX) / 
+              / (sum(j!=i)(prod(k)(P(Dk|HjX))P(Hj|X)) / (sum(j!=i)(P(Hj|X)))))
+            
+            Why?
+              Proof in about 10 lines.
+              
+              Use of product rule,
+              hypothesis exclusivity properties,
+              use of logical independence.
+            
+            Time complexity of calculation?
+              O(n * m) to calculate P of all hypotheses after data
+              Where
+                n - amount of hypotheses
+                m - amount of data points
+              Assuming O(1) evaluation for P(Di|Hj)
+              
+              Be vary of float errors tho.
+          
+          4.4.1 Digression on another derivation
+            Jaynes shows a completely different way of getting the formula
+            for multi hypothesis testing.
+            
+            How to do estimates in head for multiple hypothesis testing?
+              As long as the probability of hypotheses #3..#n are much less
+              likely than #1 and #2,
+              the updates for hypotheses #1 and #2 work approximately like
+              in the binary case.
+              
+            How does adding an unlikely hypothesis affect hypothesis testing?
+              Unlikely hypotheses usually don't affect the outcome very much.
+              But ulikely data can make an unlikely hypotheses likely.
+              
+            What's the threshold fraction?
+              If You've got hard coded hypotheses for frequencies.
+              The threshold fraction is the frequency at which the prefered
+              hypothesis flips when doing arbitrarily many tests.
+            
+        4.5 Continuous probability distribution functions
+          What's a cumulative distribution function?
+            Probability that a variable is less than some value
+              i.e. G(q) = P(f <= q|X)
+          
+          What's a cdf?
+            cumulative distribution function
+            
+          formula for P(q1 < f <= q2|X) with cdfs?
+            P(q1 < f <= q2|X) = G(q2) - G(q1)
+            
+            why?
+              Negation rule, and
+              Sum of exclusive statements
+          
+          What's a probability density function?
+            G(q) = P(f <= q|X)
+            If G(q) is differentiable then
+              g(q) = G'q(q)
+            
+            Why are they used?
+              They can work with infinite amounts of hypotheses for f.
+                If g(q) is known You can calculate:
+                integral(q1..q2)(G'q(q) dq) = P(q1 < f <= q2|X)
+              
+          What's a pdf?
+            Probability density function
+            Probability distribution function
+          
+          Can Jaynes prob theory operate with continuous variables?
+            Yes.
+            See cdfs and pdfs.
+          
+          One must be careful to work with limits and not inifinities, to
+          avoid paradoxes.
+          
+          Why is probability distribution function a bad name?
+            It says that something has a distribution, but
+              in reality it has exactly one value.
+              The agent's partial knowledge is what has a distribution.
+          
+          How does Jaynes handle discontinuities in cdfs?
+            Jaynes proposes modeling discontinuities in G(q) by using limits
+            of continuous functions for g(q), where the math works out.
+          
+          Why is it not correct to have continuous hypotheses for frequencies?
+            Unless an infinite amount of things are done, a frequency will 
+            always be a fraction m/n.
+            Which to be correct must be modeled purely discretely.
+            
+            But continuous hypotheses are often a good approximation.
+            
+        4.6 Testing an infinite number of hypotheses
+          Bayes formula for a continuous variable?
+            g(f|DX) = g(f|X) * P(D|fX) / P(D|X)
+            
+            Why?
+              If we assume G(q|DX) and G(q|X) are differentiable.
+              P((f, f + Δf)|DX) = 
+                = P((f, f + Δf)|X) * P(D|(f, f + Δf)X) / P(D|X)
+              Now if we multiply both sides by Δf, we get
+              P((f, f + Δf)|DX) * Δf = 
+                = P((f, f + Δf)|X) * Δf * P(D|(f, f + Δf)X) / P(D|X)
+              
+              If we take the limit as Δf -> 0
+                P((f, f + Δf)|DX) * Δf becomes the derivative
+                  g(f|DX)
+                P((f, f + Δf)|X) * Δf becomes the derivative
+                  g(f|X)
+                And P(D|(f, f + Δf) X) becomes
+                  P(D|f X)
+                    This works as long as P(D|f X) is continuous on f.
+              So we get
+              g(f|DX) = g(f|X) * P(D|f X) / P(D|X)
+          
+            Hack for not caluclating P(D|X)?
+              normalize posteriot g(f|DX) so that 
+                integral(-inf..inf)(g(x) dx) = 1
+              
+              Why does this work?
+                This works in the discrete case.
+                If all probs of hypotheses fi are exclusive and add to 1.
+                sum(P(fi|DX)) = sum(P(fi|X) * P(D|fiX)) / P(D|X) = 1
+                So
+                norm_factor = sum(P(fi|DX)) * P(D|X) = P(D|X)
+                But also
+                sum(P(fi|DX)) * P(D|X) =
+                  = sum(P(fi|X) * P(D|fiX) / P(D|X)) * P(D|X) =
+                  = sum(P(fi|X) * P(D|fiX))
+                
+                P(fi|DX) = 
+                  = P(fi|X) * P(D|fiX) / P(D) =
+                  = P(fi|DX) * P(D|fi) / norm_factor
+                
+                The continuous case can probabily be prooven through limits
+                of the discrete case.
+          
+          Mathematicians often don't prove obvious facts.
+          This sometimes leads to paradoxes later on.
+          They then conclude the theory is all wrong.
+          This is bad.
+          
+          So even the obvious stuff has to be derived from the axioms.
+          
+    Appendix B
+      This appendix actually explains the notation used.
+      
+      Usually math notation changes with time
+        Symbols that show up often are substiuted for shorter symbols.
+        Stuff that can be often infered from context is taken out.
+      
+      B.1 Notation and logicl heirarcy
+        Moved mostly to chap 1.7 notes.
+        
+        Jaynes will mostly 
+          use greek letters to denote distribution parameters
+          and latin letters when talking about estimates from data.
+      
+      B.2 Out 'cautious approach' policy
+        Moved mostly to chap 2.5 notes.
+      
+      B.3 Willy Feller on measure theory
+        What's measure theory?
+          In this context, 
+            the math that assigns values to infinite sets.
+            e.g.
+              surface areas,
+              volumes in weird spaces, like function spaces,
+              volumes in normal spaces.
+        
+        Why not define prob theory on top of measure theory?
+          There are practical cases where
+            measure theory can't handle the problems,
+            but making a limiting process that would work well is easy.
+          
+          e.g. 
+            Assigning probabilities to continuous functions
+            Three other things I didn't even understand
+        
+          If I understand correctly,
+            Jaynes 
+              loosely uses the measure theory lingo(because convenient) and
+              it's results where it corresponds to the finite sets policy.
+            
+            Otherwise he just uses what seems practical.
+        
+        Moved partly to chap 2.5 notes.
+        
+      B.4 Kronecker vs. Weierstrasz
+        Some historical beef stories about of
+          Kronecker
+          Weierstrasz
+          Cantor
+          
+      B.5 What is a legitimate mathematical function?
+        @Note draft
+          
+        
+        
+        
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
