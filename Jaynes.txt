@@ -1683,7 +1683,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           Cantor
           
       B.5 What is a legitimate mathematical function?
-        Not sure if I understand correctly, but.
+        Not sure if I understand correctly, but:
         A faliure that sometime occurs when a new field of math is discovered:
           1) New math objects with useful properties are discovered, though
             some analogies with other known math objects.
@@ -1697,7 +1697,8 @@ Probability Theory - The Logic of Science by E.T. Jaynes
               1) Discovered though some integrals. They had useful properties.
               2) Defined though integrals.
               3) Some integrals didn't converge.
-              4) Corresponding Fourier transforms did exist, and could be used?
+              4) The corresponding Fourier series did have physical
+                interpretations tho.
         
           How do people fix this?
             Define the new math objects through the useful properties.
@@ -1707,21 +1708,26 @@ Probability Theory - The Logic of Science by E.T. Jaynes
               objects works,
               but also allows exploration of other objects.
         
-        @Notes Draft
-          There was a beef between
-            pure math, and
-              Defined function as set to set mapping
-            applied math
-              Sort of acted as if functions defined through Fourier transforms
-              existed.
-              Although some don't in the set to set mapping definition?
-        
-        B.5.1 Delta-functions
-          @
-        
-        
+        Don't understand Fourier analasys, so I didn't quite understand.
+          B.5.1 Delta-functions
+          B.5.2 Nondifferentiable functions
+          B.5.3 Bogus nondifferentiable functions
           
-          
+          What I think Jaynes was trying to say?
+            In math anal it's much more practical to
+              Define functions in a way convenient to Fourier analysis,
+                which I didn't quite understand.
+
+                That's how functions are used in this book.
+                Delta functions become legit, if this is done.
+              
+              Ignore some types of non-differentiable functions,
+                because they don't seem to have any practical applications,
+                and make proofs much more complicated.
+                I didn't fully understand tho.
+      
+      B.6 Counting infinite sets
+        @Note Draft
           
           
           
