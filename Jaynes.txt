@@ -1727,10 +1727,54 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                 I didn't fully understand tho.
       
       B.6 Counting infinite sets
-        @Note Draft
+        I'm not completely sure but, perhaps Jaynes was trying to say:
+          Don't assign properties to infinite sets by analogy to finite sets.
+            why?
+              This usually leads to intuitive contradictions, which have to be
+              fixed with more arbitrary math.
+              e.g.?
+                Traditionally Infinite sets have the same size, if there exists
+                a bijections between them.
+                This means the set of integers is equal in size to the sets of
+                odd and even integers.
+                But the odd and even integers make up all the integers.
+                So that means that two sets of the integers have the same size 
+                as the set of integers.
+                So You have to make up math saying that simple addition and
+                multiplication doesn't work for infinite sizes.
+          
+          Defining a limiting process and looking at whether a property of the
+          finite sets converges can be useful.
+            e.g.?
+              If the limiting process is
+                fraction of even numbers in first n integers as n -> inf
+              Then
+                you get quite an intuitive, likely useful property that under
+                this limiting procedure the fraction of even numbers to
+                integers is 1/2.
+                
+                It's possible to prove that addition of subgroups of the
+                integers actually sum up to 1, for the same limiting process.
+            
+            I guess this is just the finite sets policy.
           
           
           
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
           
           
           
