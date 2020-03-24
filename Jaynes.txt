@@ -1728,6 +1728,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
       
       B.6 Counting infinite sets
         I'm not completely sure but, perhaps Jaynes was trying to say:
+          A way that mathematicians often fail when handling infinite sets?
           Don't assign properties to infinite sets by analogy to finite sets.
             why?
               This usually leads to intuitive contradictions, which have to be
@@ -1744,7 +1745,8 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                 multiplication doesn't work for infinite sizes.
           
           Defining a limiting process and looking at whether a property of the
-          finite sets converges can be useful.
+          finite sets converges, can be useful and doesn't lead to
+          contradictions.
             e.g.?
               If the limiting process is
                 fraction of even numbers in first n integers as n -> inf
@@ -1758,12 +1760,52 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             
             I guess this is just the finite sets policy.
           
+      B.7 The Hausdorff sphere paradox and mathematical diseases
+        Not completely sure, but I think Jaynes was trying to say:
+          If some math has a lot of
+            paradoxes/things that are super counter intuitive
+          that's a good sign the math is useless, not the intuitions.
+            e.g.
+              The Hausforff paradox shows infinite set theory is trash, because
+              it contradicts very basic intuitions about how areas should work.
+
+              What's the Hausdorff paradox?
+                It's possible to construct three disjoint sets X, Y, Z,
+                such that
+                  they cover a sphere, except for a countable number of points,
+                  X, Y, Z and union(X, Y) can be transformed into eachother by 
+                    a rotation.
+
+      B.8 What am I supposed to publish?
+        Jaynes says when writing he
+          tries to explain choices he makes that are not obvious,
+          but doesn't explain choices that he thinks are actually obvious,
+          from a practical application point of view.
+
+        When is mathematical rigor actually bad?
+          Usually it isn't.
+          But for many applied math fields,
+            looking at whether your assumptions or intermediate results
+            seem to work in the world is very important,
+            
+            The formal definitions often don't correspond to the world, 
+            and only the higher abstractions work similarly to the world.
+
+            e.g. 
+              Calculating necessary paint sort of works at human scales.
+              But the paint has a thickness, which means the integral
+              sum breaks down at sizes < 1mm for odd shapes.
+              
+              Being rigorous would lead one to calculate in any microscopic 
+              bumps on the surface, which would overestimate the paint need.
+              
+      B.9 Mathematical courtesy
+        @Note Draft
+          A young mathematician explained his proof very math rigorously.
+            because these days people are forced to be "math rigorous".
+          Infering obvious necessary conditions is not math rigorous,
+            although very practical.
           
-          
-        
-        
-        
-        
         
         
         
