@@ -1800,13 +1800,43 @@ Probability Theory - The Logic of Science by E.T. Jaynes
               bumps on the surface, which would overestimate the paint need.
               
       B.9 Mathematical courtesy
-        @Note Draft
-          A young mathematician explained his proof very math rigorously.
-            because these days people are forced to be "math rigorous".
-          Infering obvious necessary conditions is not math rigorous,
-            although very practical.
+        Things to remember when creating a proof for practical applications
+          istead of math rigor?
           
+          Let's say the theorem is about some objects.
+          It's ok if the theorem assumes properties of the objects that are
+            likely to be true in the expected applications.
+          
+          It's ok to not write down very obviously necessary things.
+            e.g. 
+              If f: R -> R, You don't have to mention that x e R.
+              If f(x) is differentiated at some point, it's ok to not write
+                that f(x) has to be differentiable, because it's inferable.
+                
+                Although as a programmer I somewhat disagree.
+          
+          It's ok to not look at degenerate cases that are unlikely to show up.
+          
+          It's ok to make the theorem just general enough to be usable.
+            i.e. Wasting effort on something that won't get used anyway is bad.
         
+          why?
+            It just saves effort.
+        
+        What's the Emancipation Proclamation?
+          Janes tried to write the book keeping the previous ideas in mind.
+        
+        A way in which applied math occasionally fails
+          Something useful is discovered.
+          Limitations are not fully understood.
+          It becomes culturally accepted to use it in places where it doesn't
+            make sense.
+          
+          implications?
+            I guess frequentist stats are full of things like these.
+              e.g.
+                Confidence intervals on non-normal data.
+                p-values on things with small priors to begin with.
         
         
         
