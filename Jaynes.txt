@@ -1,3 +1,6 @@
+Note Notes
+  iiuc - Not completely sure, but if I understand correctly...
+
 Probability Theory - The Logic of Science by E.T. Jaynes
   Why this book good?
     E.Y. says it's sexy.
@@ -1633,75 +1636,69 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           So even the obvious stuff has to be derived from the axioms.
           
     Appendix B
-      This appendix actually explains the notation used.
-      
-      Usually math notation changes with time
-        Symbols that show up often are substiuted for shorter symbols.
-        Stuff that can be often infered from context is taken out.
+      This appendix contains
+        Explanations of some important notation nuances.
+        Some notes on how traditional math rigor fails in applied math.
       
       B.1 Notation and logicl heirarcy
         Moved mostly to chap 1.7 notes.
         
         Jaynes will mostly 
-          use greek letters to denote distribution parameters
-          and latin letters when talking about estimates from data.
+          use greek letters to represent distribution parameters,
+          and latin letters to represent estimates from data.
       
       B.2 Out 'cautious approach' policy
         Moved mostly to chap 2.5 notes.
       
       B.3 Willy Feller on measure theory
         What's measure theory?
-          In this context, 
+          In this context,
             the math that assigns values to infinite sets.
             e.g.
               surface areas,
-              volumes in weird spaces, like function spaces,
-              volumes in normal spaces.
+              volumes,
+              volumes in weird spaces like function spaces.
         
         Why not define prob theory on top of measure theory?
           There are practical cases where
-            measure theory can't handle the problems,
-            but making a limiting process that would work well is easy.
+            measure theory doesn't work well,
+            but making a limiting process that gives correct answers is easy.
           
           e.g. 
-            Assigning probabilities to continuous functions
-            Three other things I didn't even understand
+            Assigning probabilities to continuous function spaces.
+            Jaynes listed three other things I didn't even understand.
         
-          If I understand correctly,
-            Jaynes 
-              loosely uses the measure theory lingo(because convenient) and
-              it's results where it corresponds to the finite sets policy.
-            
-            Otherwise he just uses what seems practical.
+          Why does Jaynes use measure theory terminology then?
+            iiuc
+              It allows for shorter proofs and statements for general theorems 
+              and problems.
         
         Moved partly to chap 2.5 notes.
         
       B.4 Kronecker vs. Weierstrasz
-        Some historical beef stories about of
-          Kronecker
-          Weierstrasz
-          Cantor
+        Some historical beef stories about Kronecker & Weierstrasz.
           
       B.5 What is a legitimate mathematical function?
-        Not sure if I understand correctly, but:
-        A faliure that sometime occurs when a new field of math is discovered:
-          1) New math objects with useful properties are discovered, though
-            some analogies with other known math objects.
+        iiuc
+        A faliure that sometimes occurs when a new field of math is discovered:
+          1) New math objects are discovered through some analogous known math 
+            objects.
           2) The new ones are defined using the known math objects.
           3) Some of the new objects can't be defined using the known objects.
-          4) This leads to some new objects not being explored, even though 
-            they have practical applications.
+          4) This leads to some of the new objects not being explored, even 
+            though they have practical applications.
           
           e.g.
             Fourier transforms
-              1) Discovered though some integrals. They had useful properties.
+              1) Discovered though some integrals.
               2) Defined though integrals.
               3) Some integrals didn't converge.
-              4) The corresponding Fourier series did have physical
-                interpretations tho.
+              4) The corresponding Fourier series did have useful physical
+                interpretations though.
         
           How do people fix this?
-            Define the new math objects through the useful properties.
+            Define the new math objects through their useful properties, not
+            through the analogous objects.
               
             why?
               That includes the situations where the definition through known
