@@ -1680,7 +1680,8 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           
       B.5 What is a legitimate mathematical function?
         iiuc
-        A faliure that sometimes occurs when a new field of math is discovered:
+        A faliure that sometimes occurs when a new field of math is discovered
+          though objects with analogous properties.
           1) New math objects are discovered through some analogous known math 
             objects.
           2) The new ones are defined using the known math objects.
@@ -1693,54 +1694,68 @@ Probability Theory - The Logic of Science by E.T. Jaynes
               1) Discovered though some integrals.
               2) Defined though integrals.
               3) Some integrals didn't converge.
-              4) The corresponding Fourier series did have useful physical
+              4) The non-converging Fourier transforms did have useful physical
                 interpretations though.
         
           How do people fix this?
             Define the new math objects through their useful properties, not
-            through the analogous objects.
+            through the analogous known objects.
               
             why?
-              That includes the situations where the definition through known
-              objects works,
+              This definition can still be applied to the known objects, where
+              it works,
               but also allows exploration of other objects.
         
-        Don't understand Fourier analasys, so I didn't quite understand.
+        I don't understand Fourier analasys, so I didn't quite understand.
           B.5.1 Delta-functions
           B.5.2 Nondifferentiable functions
           B.5.3 Bogus nondifferentiable functions
           
-          What I think Jaynes was trying to say?
+          very unsure, but iiuc Jaynes was trying to say
             In math anal it's much more practical to
-              Define functions in a way convenient to Fourier analysis,
-                which I didn't quite understand.
-
+              Define functions in a way convenient to Fourier analysis.
                 That's how functions are used in this book.
-                Delta functions become legit, if this is done.
+                If this is done delta functions become legit.
               
               Ignore some types of non-differentiable functions,
-                because they don't seem to have any practical applications,
-                and make proofs much more complicated.
-                I didn't fully understand tho.
+                It saves effort.
+                  because they don't have any practical applications,
+                  and make proofs much more complicated.
+                
+                I didn't completely understand what exact types of functions.
       
       B.6 Counting infinite sets
-        I'm not completely sure but, perhaps Jaynes was trying to say:
-          A way that mathematicians often fail when handling infinite sets?
-          Don't assign properties to infinite sets by analogy to finite sets.
+        Somewhat unsure, but iiuc Jaynes was trying to say:
+          A way that mathematicians fail when handling infinite sets?
+            Assigning properties to infinite sets by analogy to finite sets.
+            
             why?
               This usually leads to intuitive contradictions, which have to be
-              fixed with more arbitrary math.
+              fixed with defining more math.
               e.g.?
-                Traditionally Infinite sets have the same size, if there exists
-                a bijections between them.
-                This means the set of integers is equal in size to the sets of
-                odd and even integers.
-                But the odd and even integers make up all the integers.
-                So that means that two sets of the integers have the same size 
-                as the set of integers.
-                So You have to make up math saying that simple addition and
-                multiplication doesn't work for infinite sizes.
-          
+                Analogy to finite sets:
+                  Traditionally infinite sets have the same size, if there 
+                  exists a bijections between them.
+                
+                Consequences:
+                  This means the set of integers is equal in size to the sets 
+                  of odd and even integers.
+                  
+                  But the odd and even integers make up all the integers.
+                  
+                  So that means that two sets of the integers have the same 
+                  size as the set of integers.
+                
+                The fixes:
+                  So You to say that simple addition and multiplication doesn't
+                  work for infinite sizes.
+            
+            Why is this bad?
+              This can cause
+            
+            How to fix?
+              Jaynes proposes always following the finite sets policy.
+              
           Defining a limiting process and looking at whether a property of the
           finite sets converges, can be useful and doesn't lead to
           contradictions.
