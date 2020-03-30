@@ -707,7 +707,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           an infinitely small amount of anything,
           continuous things,
         first create a process of building larger and larger finite systems,
-        and see whether it converges to a system with the properties desired.
+        and see whether a property of interest converges.
         This is called the limiting process.
       
         If it doesn't converge, don't use it.
@@ -1747,44 +1747,34 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                   size as the set of integers.
                 
                 The fixes:
-                  So You to say that simple addition and multiplication doesn't
-                  work for infinite sizes.
+                  So You have to say that simple addition and multiplication 
+                  works differently for infinite sizes.
             
             Why is this bad?
-              This can cause
+              Quite usure, but maybe Jaynes meant:
+                The analogies chosen for infinite sets are quite arbitrary,
+                and the contradictions that come from them are quite arbitrary.
+                This leads to infinite sets not being usable in applications
+                where different initial analogies would make more sense.
             
             How to fix?
               Jaynes proposes always following the finite sets policy.
               
-          Defining a limiting process and looking at whether a property of the
-          finite sets converges, can be useful and doesn't lead to
-          contradictions.
-            e.g.?
-              If the limiting process is
-                fraction of even numbers in first n integers as n -> inf
-              Then
-                you get quite an intuitive, likely useful property that under
-                this limiting procedure the fraction of even numbers to
-                integers is 1/2.
-                
-                It's possible to prove that addition of subgroups of the
-                integers actually sum up to 1, for the same limiting process.
-            
-            I guess this is just the finite sets policy.
-          
       B.7 The Hausdorff sphere paradox and mathematical diseases
         Not completely sure, but I think Jaynes was trying to say:
           If some math has a lot of
             paradoxes/things that are super counter intuitive
-          that's a good sign the math is useless, not the intuitions.
+          that's a good sign the math is useless in practice.
             e.g.
-              The Hausforff paradox shows infinite set theory is trash, because
-              it contradicts very basic intuitions about how areas should work.
+              The Hausdorff paradox shows infinite set theory is trash for mass
+              assignment or probability theory, because it contradicts very 
+              basic intuitions about how areas should work.
 
               What's the Hausdorff paradox?
                 It's possible to construct three disjoint sets X, Y, Z,
                 such that
-                  they cover a sphere, except for a countable number of points,
+                  their union is a sphere, 
+                    except for countably infinite points,
                   X, Y, Z and union(X, Y) can be transformed into eachother by 
                     a rotation.
 
@@ -1796,21 +1786,24 @@ Probability Theory - The Logic of Science by E.T. Jaynes
 
         When is mathematical rigor actually bad?
           Usually it isn't.
-          But for many applied math fields,
-            looking at whether your assumptions or intermediate results
-            seem to work in the world is very important,
+          
+          In applied math
+            When the higher abstractions sort of correspond to the math,
+            but the lower abstractions don't.
+              e.g. 
+                Calculating necessary paint sort of works at human scales.
+                But the paint has a thickness, which means the integral
+                sum break down at sizes < 1mm for odd shapes.
+                
+                Being rigorous would lead one to calculate in any microscopic 
+                bumps on the surface, which would overestimate the paint need.
+                Or better yet, conclude the surface is baddly defined, because
+                it's made of atoms that aren't continuous.
             
-            The formal definitions often don't correspond to the world, 
-            and only the higher abstractions work similarly to the world.
-
-            e.g. 
-              Calculating necessary paint sort of works at human scales.
-              But the paint has a thickness, which means the integral
-              sum breaks down at sizes < 1mm for odd shapes.
-              
-              Being rigorous would lead one to calculate in any microscopic 
-              bumps on the surface, which would overestimate the paint need.
-              
+            Looking at whether your higher abstractions are good approximations
+            and seem to work is much more important than 
+            being rigorous about the axiomatic stuff that doesn't work anyway.
+            
       B.9 Mathematical courtesy
         Things to remember when creating a proof for practical applications
           istead of math rigor?
@@ -1821,19 +1814,24 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           
           It's ok to not write down very obviously necessary things.
             e.g. 
-              If f: R -> R, You don't have to mention that x e R.
+              If 
+                f: R -> R, 
+                and You use f(x), 
+              You don't have to mention that x e R.
+              
               If f(x) is differentiated at some point, it's ok to not write
                 that f(x) has to be differentiable, because it's inferable.
-                
-                Although as a programmer I somewhat disagree.
-          
+              
+              Although type checking can reduce errors imo.
+              
           It's ok to not look at degenerate cases that are unlikely to show up.
           
           It's ok to make the theorem just general enough to be usable.
             i.e. Wasting effort on something that won't get used anyway is bad.
         
           why?
-            It just saves effort.
+            It just saves effort when writing up proofs,
+            and usually makes them easier to understand.
         
         What's the Emancipation Proclamation?
           Janes tried to write the book keeping the previous ideas in mind.
