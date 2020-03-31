@@ -707,7 +707,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           an infinitely small amount of anything,
           continuous things,
         first create a process of building larger and larger finite systems,
-        and see whether a property of interest converges.
+        and see whether the property of interest converges.
         This is called the limiting process.
       
         If it doesn't converge, don't use it.
@@ -1628,12 +1628,50 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                 The continuous case can probabily be prooven through limits
                 of the discrete case.
           
-          Mathematicians often don't prove obvious facts.
-          This sometimes leads to paradoxes later on.
-          They then conclude the theory is all wrong.
-          This is bad.
-          
-          So even the obvious stuff has to be derived from the axioms.
+          @Note Draft
+            Mathematicians often don't prove obvious facts.
+            This sometimes leads to paradoxes later on.
+            They then conclude the axioms are wrong.
+            This is bad.
+            
+
+            Every time something new is being done, 
+              e.g. continuous hypothesis
+            everything should be carefully derived not reasoned out through
+            intuition.
+            
+            Posterior for continuous frequency hypothesis space?
+              p - positives
+              n - negatives
+              
+              r(f) = f^p(1-f)^n g(f|X) - relative likelyhood.
+              g(f|DX) =  r(f) / integral(0..1)(r(f) df)
+              
+              why?
+                Bayes theorem for continuous hypotheses, and 
+                normalization trick.
+            
+            Complete beta function?
+              intuition?
+                Asumming a uniform prior for frequency,
+                probability of a frequency given data
+                  p - positive outcomes
+                  n - negative outcomes
+              
+              formula?
+                g(f|DX) = (p + n + 1)! / (p! * n!) * f^p * (1 - f)^n
+              
+              why?
+                Not sure, algebra ain't my strong side.
+            
+          4.6.1 Historical Digression
+            @Note Draft
+              Bayes's theorem ain't bayes's, as with all discoveries.
+              
+              Probability theory as extending math logic is more general than
+              bayes's theorem.
+              
+              
           
     Appendix B
       This appendix contains
@@ -1838,7 +1876,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
         
         A way in which applied math occasionally fails
           Something useful is discovered.
-          Limitations are not fully understood.
+          Limitations are not fully understood by most mathematicians.
           It becomes culturally accepted to use it in places where it doesn't
             make sense.
           
@@ -1846,7 +1884,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             I guess frequentist stats are full of things like these.
               e.g.
                 Confidence intervals on non-normal data.
-                p-values on things with small priors to begin with.
+                p-values on things with extreme priors to begin with.
         
         
         
