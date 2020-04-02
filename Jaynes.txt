@@ -1602,7 +1602,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                   g(f|X)
                 And P(D|(f, f + Δf) X) becomes
                   P(D|f X)
-                    This works as long as P(D|f X) is continuous on f.
+                    @Why tho?
               So we get
               g(f|DX) = g(f|X) * P(D|f X) / P(D|X)
           
@@ -1633,7 +1633,6 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             This sometimes leads to paradoxes later on.
             They then conclude the axioms are wrong.
             This is bad.
-            
 
             Every time something new is being done, 
               e.g. continuous hypothesis
@@ -1654,7 +1653,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             Complete beta function?
               intuition?
                 Asumming a uniform prior for frequency,
-                probability of a frequency given data
+                probability of a frequency f given data:
                   p - positive outcomes
                   n - negative outcomes
               
@@ -1671,7 +1670,30 @@ Probability Theory - The Logic of Science by E.T. Jaynes
               Probability theory as extending math logic is more general than
               bayes's theorem.
               
-              
+              de Moivre Laplace theorem?
+                How I understand the theorem?
+                  A bernulli process's outcome can be approximated using a 
+                  normal.
+                How Jaynes explains it?
+                  For uniform prob for frequencies, the posterior prob tends to
+                  a normal distribution around the data frequency.
+                
+                How are they connected?
+                  I guess it might be possible to connect the two using some
+                  symmetry or something.
+                
+                The approximation works well when both p and n are large.
+                
+                The stddev of the approximation is proportional to N^(-0.5).
+                
+                The stddev is a property of our knowledge, not of the world.
+                
+                The principles we have so far allow to think about much more
+                complicated situations than just binary data and unchanging
+                frequencies.
+                  like
+                    Detecting changes in frequency.
+                    Using more than just binary data.
           
     Appendix B
       This appendix contains
