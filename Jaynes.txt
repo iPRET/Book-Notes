@@ -1560,26 +1560,38 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             Probability density function
             Probability distribution function
           
-          Can Jaynes prob theory operate with continuous variables?
+          Can Jaynes prob theory operate with continuous hypotheses?
             Yes.
             See cdfs and pdfs.
           
-          One must be careful to work with limits and not inifinities, to
-          avoid paradoxes.
+          Remember to use finite sets policy.
           
           Why is probability distribution function a bad name?
             It says that something has a distribution, but
-              in reality it has exactly one value.
+              in reality when we measure has exactly one value.
               The agent's partial knowledge is what has a distribution.
           
           How does Jaynes handle discontinuities in cdfs?
-            Jaynes proposes modeling discontinuities in G(q) by using limits
-            of continuous functions for g(q), where the math works out.
+            Didn't really understand, 
+              because I don't know higher math,
+              but my hyptoheses for what was mean are:
+              Either he mean
+                He proposes using functions defined through fourier
+                transforms, where the derivative to a discontinuity makes
+                sense.
+              Or
+                Use a different definition for the derivative such that:
+                  If you have G(q), 
+                    which has some set of discontinuities
+                    
+                    
+            
+            Notation?
           
           Why is it not correct to have continuous hypotheses for frequencies?
             Unless an infinite amount of things are done, a frequency will 
             always be a fraction m/n.
-            Which to be correct must be modeled purely discretely.
+            Which to be correct must be calculated discretely not continuously.
             
             But continuous hypotheses are often a good approximation.
             
@@ -1629,6 +1641,9 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                 of the discrete case.
           
           @Note Draft
+            Jaynes says that most continuous value problems are actually
+            discrete problems in disguise.
+            
             Mathematicians often don't prove obvious facts.
             This sometimes leads to paradoxes later on.
             They then conclude the axioms are wrong.
