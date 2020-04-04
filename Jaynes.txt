@@ -1572,19 +1572,44 @@ Probability Theory - The Logic of Science by E.T. Jaynes
               The agent's partial knowledge is what has a distribution.
           
           How does Jaynes handle discontinuities in cdfs?
-            Didn't really understand, 
-              because I don't know higher math,
+            Didn't really understand,
+              because I don't undestand higher math,
               but my hyptoheses for what was mean are:
-              Either he mean
-                He proposes using functions defined through fourier
-                transforms, where the derivative to a discontinuity makes
+                He proposes using functions defined through Fourier
+                transforms, where the derivative of a discontinuity makes
                 sense.
               Or
-                Use a different definition for the derivative such that:
-                  If you have G(q), 
-                    which has some set of discontinuities
+                Use a different definition for derivative and integral:
+                  If You have a function G(q) with some discontinutities
+                    at points x1, x2...
+                    with size s1, s2...
+                  Redefine the derivative,
+                  write it as:
+                    G'(q) + s1 * δ(x - x1) + s2 * δ(x - x2)...
+                    iiuc
+                      this is not a function, but very fancy notation.
+                      
+                      However someone has probably proved that this fancy
+                      notation works how a person would intuitively expect
+                      it to work.
+                      
+                      Or at least acting like the fancy notation works that
+                      way doesn't cause paradoxes.
+                      
+                  The integral for a function like this
+                    g(q) = G'(q) + s1 * δ(x - x1) + s2 * δ(x - x2)...
+                  is redefined as a limit,
+                    integ(a..b)(g(q)) = 
+                    Lim(i->inf)(integ(G'(q) + s1 * fi(x - x1) + fi(x - x2)...))
                     
-                    
+                    where the fi(x - xj) functions are
+                      functions that get sharper and sharper around xj
+                        as i increases,
+                      but have an integral of 1.
+                    So in the limit the integral converges to the jump being
+                    included in the integral,
+                      if the discontinuity is in the interval,
+                      ...
             
             Notation?
           
