@@ -1564,8 +1564,6 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             Yes.
             See cdfs and pdfs.
           
-          Remember to use finite sets policy.
-          
           Why is probability distribution function a bad name?
             It says that something has a distribution, but
               in reality when we measure has exactly one value.
@@ -1596,7 +1594,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                       Or at least acting like the fancy notation works that
                       way doesn't cause paradoxes.
                       
-                  The integral for a function like this
+                  The integral for a "function" like this
                     g(q) = G'(q) + s1 * δ(x - x1) + s2 * δ(x - x2)...
                   is redefined as a limit,
                     integ(a..b)(g(q)) = 
@@ -1609,10 +1607,19 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                     So in the limit the integral converges to the jump being
                     included in the integral,
                       if the discontinuity is in the interval,
-                      ...
+                    and not,
+                      if the discontinuity is not in the inteval.
+              
+              What does this mean in practice?
+                Act as if a thing called a dirac delta function exists.
+                Write it as δ(x - offset).
+                Act as if it's a function.
+                If an integral integrates δ(x - offset) over the point 
+                "offset", the integral becomes one unit larger.
+                  e.g.
+                    integ( 0..1)(420 * δ(x - 0.5)dx) = 420
+                    integ(-1..0)(420 * δ(x - 0.5)dx) = 0
             
-            Notation?
-          
           Why is it not correct to have continuous hypotheses for frequencies?
             Unless an infinite amount of things are done, a frequency will 
             always be a fraction m/n.
@@ -1625,21 +1632,49 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             g(f|DX) = g(f|X) * P(D|fX) / P(D|X)
             
             Why?
-              If we assume G(q|DX) and G(q|X) are differentiable.
-              P((f, f + Δf)|DX) = 
-                = P((f, f + Δf)|X) * P(D|(f, f + Δf)X) / P(D|X)
-              Now if we multiply both sides by Δf, we get
-              P((f, f + Δf)|DX) * Δf = 
-                = P((f, f + Δf)|X) * Δf * P(D|(f, f + Δf)X) / P(D|X)
+              Ok I'll be honest,
+                I tried hard to understand Jaynes's proof,
+                but just didn't.
+                  I don't comprehend how he handles discontinuities.
+                
+                @Maybe I could just figure out how to make a proof myself.
+                
+                Intuitively it sort of makes sense.
+                
+                Theoretically, I don't understand how Jaynes's proof works
+                  for discontinuities
+              
+              From bayes rule
+                P((f, f + Δf)|DX) = 
+                  = P((f, f + Δf)|X) * P(D|(f, f + Δf)X) / P(D|X)
+              Divide both sides by Δf
+                P((f, f + Δf)|DX) / Δf = 
+                  = P((f, f + Δf)|X) / Δf * P(D|(f, f + Δf)X) / P(D|X)
               
               If we take the limit as Δf -> 0
-                P((f, f + Δf)|DX) * Δf becomes the derivative
+                P((f, f + Δf)|DX) / Δf becomes the derivative
                   g(f|DX)
-                P((f, f + Δf)|X) * Δf becomes the derivative
+                P((f, f + Δf)|X) / Δf becomes the derivative
                   g(f|X)
+                  I'm not sure how discontinuities get handled here though.
                 And P(D|(f, f + Δf) X) becomes
                   P(D|f X)
                     @Why tho?
+                      @Draft
+                        Ok I'm extremely confused right now.
+                        
+                        Continuous functions are a good approximation to the
+                        discrete case.
+                        
+                        Continuous approximations make the results easier to
+                        calculate sometimes.
+                        
+                        We don't care about infinite set theory paradoxes,
+                        we just want practical results.
+                        
+                        Assume A - frequency is in (f, f + Δf).
+                        
+                        P(A|X) / Δf ~= g(f|X)
               So we get
               g(f|DX) = g(f|X) * P(D|f X) / P(D|X)
           
