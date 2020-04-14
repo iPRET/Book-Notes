@@ -1,3 +1,6 @@
+Todo
+  Rewrite finite sets policy part
+
 Note Notes
   iiuc - Not completely sure, but if I understand correctly...
 
@@ -1534,27 +1537,31 @@ Probability Theory - The Logic of Science by E.T. Jaynes
         4.5 Continuous probability distribution functions
           What's a cumulative distribution function?
             Probability that a variable is less than some value
-              i.e. G(q) = P(f <= q|X)
+              i.e. G(q|X) = P(f <= q|X)
           
           What's a cdf?
             cumulative distribution function
             
           formula for P(q1 < f <= q2|X) with cdfs?
-            P(q1 < f <= q2|X) = G(q2) - G(q1)
+            P(q1 < f <= q2|X) = G(q2|X) - G(q1|X)
             
             why?
               Negation rule, and
               Sum of exclusive statements
           
           What's a probability density function?
-            G(q) = P(f <= q|X)
-            If G(q) is differentiable then
-              g(q) = G'q(q)
+            G(q|X) = P(f <= q|X)
+            g(q|X) = G'q(q|X)
+            g(q|X) is the probability density function.
             
             Why are they used?
-              They can work with infinite amounts of hypotheses for f.
-                If g(q) is known You can calculate:
-                integral(q1..q2)(G'q(q) dq) = P(q1 < f <= q2|X)
+              They are a good approximation for large systems of exclusive
+              hypotheses.
+              
+              In these situations something like bayes rule approximately 
+              applies to pdfs.
+              
+              And it's easy to calculate the cdf from a pdf.
               
           What's a pdf?
             Probability density function
@@ -1569,57 +1576,6 @@ Probability Theory - The Logic of Science by E.T. Jaynes
               in reality when we measure has exactly one value.
               The agent's partial knowledge is what has a distribution.
           
-          How does Jaynes handle discontinuities in cdfs?
-            Didn't really understand,
-              because I don't undestand higher math,
-              but my hyptoheses for what was mean are:
-                He proposes using functions defined through Fourier
-                transforms, where the derivative of a discontinuity makes
-                sense.
-              Or
-                Use a different definition for derivative and integral:
-                  If You have a function G(q) with some discontinutities
-                    at points x1, x2...
-                    with size s1, s2...
-                  Redefine the derivative,
-                  write it as:
-                    G'(q) + s1 * δ(x - x1) + s2 * δ(x - x2)...
-                    iiuc
-                      this is not a function, but very fancy notation.
-                      
-                      However someone has probably proved that this fancy
-                      notation works how a person would intuitively expect
-                      it to work.
-                      
-                      Or at least acting like the fancy notation works that
-                      way doesn't cause paradoxes.
-                      
-                  The integral for a "function" like this
-                    g(q) = G'(q) + s1 * δ(x - x1) + s2 * δ(x - x2)...
-                  is redefined as a limit,
-                    integ(a..b)(g(q)) = 
-                    Lim(i->inf)(integ(G'(q) + s1 * fi(x - x1) + fi(x - x2)...))
-                    
-                    where the fi(x - xj) functions are
-                      functions that get sharper and sharper around xj
-                        as i increases,
-                      but have an integral of 1.
-                    So in the limit the integral converges to the jump being
-                    included in the integral,
-                      if the discontinuity is in the interval,
-                    and not,
-                      if the discontinuity is not in the inteval.
-              
-              What does this mean in practice?
-                Act as if a thing called a dirac delta function exists.
-                Write it as δ(x - offset).
-                Act as if it's a function.
-                If an integral integrates δ(x - offset) over the point 
-                "offset", the integral becomes one unit larger.
-                  e.g.
-                    integ( 0..1)(420 * δ(x - 0.5)dx) = 420
-                    integ(-1..0)(420 * δ(x - 0.5)dx) = 0
-            
           Why is it not correct to have continuous hypotheses for frequencies?
             Unless an infinite amount of things are done, a frequency will 
             always be a fraction m/n.
@@ -1627,56 +1583,77 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             
             But continuous hypotheses are often a good approximation.
             
+          How does Jaynes handle discontinuities in cdfs?
+            Jaynes proposes using dirac delta function notation to handle
+            discontinuities.
+            
+            What's a dirac delta function?
+              Notation abuse.
+              As far as I could understand you have to redefine what derivative
+              and integral mean:
+                If You have a function G(q) with some discontinutities
+                  at points x1, x2...
+                  with size s1, s2...
+                Redefine the derivative,
+                write it as:
+                  G'(q) + s1 * δ(x - x1) + s2 * δ(x - x2)...
+                  iiuc
+                    this is not a function. This is some very fancy notation
+                    abuse, at least in standard math.
+                    iiuc
+                      It might make sense in Fourier analysis where the concept
+                      of a function is redefined.
+                    
+                    The δ(x) function is intuitively interpreted to be 0
+                    everywhere except at 0 where it's infinite, such that
+                    integral(a..b)(δ(x)dx) = 1, if 0 e (a..b), but 0 otherwise.
+                    
+                    However someone has probably proven that this notation 
+                    works how a person would intuitively expect it to work.
+                    
+                The integral for a "function" like this
+                  g(q) = G'(q) + s1 * δ(x - x1) + s2 * δ(x - x2)...
+                is redefined as a limit,
+                  integ(a..b)(g(q)) = 
+                  Lim(i->inf)(integ(G'(q) + s1 * fi(x - x1) + fi(x - x2)...))
+                  
+                  where the fi(x - xj) functions are
+                    functions that get sharper and sharper around xj
+                      as i increases,
+                    but have an integral of 1.
+                  So in the limit the integral converges to the discontinutiy 
+                  jump being included in the integral,
+                    if the discontinuity is in the interval,
+                  and not,
+                    if the discontinuity is not in the inteval.
+            
+            Why?
+              I thought long and hard, but I really didn't understand why he
+              handles discontinuties this way.
+              
+              My best guess of what Jaynes thinks is:
+                If You just use dirac delta functions to model discontinuties,
+                the math just works out and keeps many useful properties.
+                
+                And we use 
+                  diract delta functions instead of 
+                  just making rules for discontinuities
+                because of Jaynes's policy around dealing with infinities.
+              
+              The limitations to this approach are somewhat unclear to me.
+              
+              However I'm not very good at higher math, so maybe I'm missing
+              something.
+            
         4.6 Testing an infinite number of hypotheses
           Bayes formula for a continuous variable?
             g(f|DX) = g(f|X) * P(D|fX) / P(D|X)
             
             Why?
-              Ok I'll be honest,
-                I tried hard to understand Jaynes's proof,
-                but just didn't.
-                  I don't comprehend how he handles discontinuities.
-                
-                @Maybe I could just figure out how to make a proof myself.
-                
-                Intuitively it sort of makes sense.
-                
-                Theoretically, I don't understand how Jaynes's proof works
-                  for discontinuities
-              
-              From bayes rule
-                P((f, f + Δf)|DX) = 
-                  = P((f, f + Δf)|X) * P(D|(f, f + Δf)X) / P(D|X)
-              Divide both sides by Δf
-                P((f, f + Δf)|DX) / Δf = 
-                  = P((f, f + Δf)|X) / Δf * P(D|(f, f + Δf)X) / P(D|X)
-              
-              If we take the limit as Δf -> 0
-                P((f, f + Δf)|DX) / Δf becomes the derivative
-                  g(f|DX)
-                P((f, f + Δf)|X) / Δf becomes the derivative
-                  g(f|X)
-                  I'm not sure how discontinuities get handled here though.
-                And P(D|(f, f + Δf) X) becomes
-                  P(D|f X)
-                    @Why tho?
-                      @Draft
-                        Ok I'm extremely confused right now.
-                        
-                        Continuous functions are a good approximation to the
-                        discrete case.
-                        
-                        Continuous approximations make the results easier to
-                        calculate sometimes.
-                        
-                        We don't care about infinite set theory paradoxes,
-                        we just want practical results.
-                        
-                        Assume A - frequency is in (f, f + Δf).
-                        
-                        P(A|X) / Δf ~= g(f|X)
-              So we get
-              g(f|DX) = g(f|X) * P(D|f X) / P(D|X)
+              I messed around for a while.
+              I came to the conclusion that
+                As long as you can make the
+                ...
           
             Hack for not caluclating P(D|X)?
               normalize posteriot g(f|DX) so that 
