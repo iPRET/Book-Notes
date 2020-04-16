@@ -1,5 +1,6 @@
 Todo
   Rewrite finite sets policy part
+  Rewrite P(A|B) derivation.
 
 Note Notes
   iiuc - Not completely sure, but if I understand correctly...
@@ -1577,8 +1578,9 @@ Probability Theory - The Logic of Science by E.T. Jaynes
               The agent's partial knowledge is what has a distribution.
           
           Why is it not correct to have continuous hypotheses for frequencies?
-            Unless an infinite amount of things are done, a frequency will 
-            always be a fraction m/n.
+            Unless an infinite amount of things are done,
+              which is nearly never the case,
+            a frequency will always be a fraction m/n.
             Which to be correct must be calculated discretely not continuously.
             
             But continuous hypotheses are often a good approximation.
@@ -1589,8 +1591,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             
             What's a dirac delta function?
               Notation abuse.
-              As far as I could understand you have to redefine what derivative
-              and integral mean:
+              iiuc You have to redefine what derivative and integral:
                 If You have a function G(q) with some discontinutities
                   at points x1, x2...
                   with size s1, s2...
@@ -1606,10 +1607,11 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                     
                     The δ(x) function is intuitively interpreted to be 0
                     everywhere except at 0 where it's infinite, such that
-                    integral(a..b)(δ(x)dx) = 1, if 0 e (a..b), but 0 otherwise.
+                    integral(a..b)(δ(x)dx) = 1, if 0 e (a..b), but 0 elsewhere.
                     
-                    However someone has probably proven that this notation 
-                    works how a person would intuitively expect it to work.
+                    However someone has probably proven that this notation
+                    works how it would, if You assumed the intuitive
+                    interpretation to be true.
                     
                 The integral for a "function" like this
                   g(q) = G'(q) + s1 * δ(x - x1) + s2 * δ(x - x2)...
@@ -1626,8 +1628,11 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                     if the discontinuity is in the interval,
                   and not,
                     if the discontinuity is not in the inteval.
+                  
+                  Odd stuff happens when the delta function is on one of the
+                  edges of the integral.
             
-            Why?
+            Why handle discontinuities this way?
               I thought long and hard, but I really didn't understand why he
               handles discontinuties this way.
               
@@ -1639,93 +1644,115 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                   diract delta functions instead of 
                   just making rules for discontinuities
                 because of Jaynes's policy around dealing with infinities.
+                  Or maybe it has something to do with Fourier analysis, or
+                  something advanced like that.
               
-              The limitations to this approach are somewhat unclear to me.
+              The limitations to this approach are somewhat unclear to me,
+                because I'm not too good at higher math.
               
-              However I'm not very good at higher math, so maybe I'm missing
-              something.
-            
         4.6 Testing an infinite number of hypotheses
-          Bayes formula for a continuous variable?
+          Bayes formula for a continuous exclusive hypotheses approximation?
             g(f|DX) = g(f|X) * P(D|fX) / P(D|X)
             
             Why?
               I messed around for a while.
-              I came to the conclusion that
-                As long as you can make the
-                ...
-          
-            Hack for not caluclating P(D|X)?
-              normalize posteriot g(f|DX) so that 
+              
+              When taking a limit of finite systems so that P(f <= a|X) 
+              converges to some piecewise continuous function G(a), 
+              the continuous approximation is precisely correct.
+              
+              But I don't really trust my ability to handle calculus.
+              So I have a very vague understanding of the limitations of
+              this approximation.
+                How many times do You have to apply Bayes rule for the error
+                to become significant when not going to the limit?
+                
+                What sets of discontinuities in G(f|X) wouldn't cause 
+                paradoxes?
+                
+                Is the dirac delta thing only used as something that just 
+                works, or is there some deeper reason?
+              
+              I assume in practice this approximation works very well even for
+              approximating pretty small systems of exclusive hypotheses.
+              
+              I feel like Jaynes doesn't explain these things too well.
+              Maybe the limitations are obvious if You've taken advanced math
+              analysis courses or something.
+              
+            Hack for not having to caluclating P(D|X)?
+              normalize posterior g(f|DX) so that 
                 integral(-inf..inf)(g(x) dx) = 1
               
               Why does this work?
                 This works in the discrete case.
-                If all probs of hypotheses fi are exclusive and add to 1.
-                sum(P(fi|DX)) = sum(P(fi|X) * P(D|fiX)) / P(D|X) = 1
-                So
-                norm_factor = sum(P(fi|DX)) * P(D|X) = P(D|X)
-                But also
-                sum(P(fi|DX)) * P(D|X) =
-                  = sum(P(fi|X) * P(D|fiX) / P(D|X)) * P(D|X) =
-                  = sum(P(fi|X) * P(D|fiX))
                 
-                P(fi|DX) = 
-                  = P(fi|X) * P(D|fiX) / P(D) =
-                  = P(fi|DX) * P(D|fi) / norm_factor
-                
-                The continuous case can probabily be prooven through limits
-                of the discrete case.
+                The continuous case approximation can probably be proven using
+                some calculus.
           
-          @Note Draft
-            Jaynes says that most continuous value problems are actually
-            discrete problems in disguise.
-            
-            Mathematicians often don't prove obvious facts.
+          How mathematicians sometimes fail when exploring new theories?
+            Mathematicians often don't prove 'obvious' facts,
+              so they assume they're true.
             This sometimes leads to paradoxes later on.
             They then conclude the axioms are wrong.
             This is bad.
-
-            Every time something new is being done, 
-              e.g. continuous hypothesis
-            everything should be carefully derived not reasoned out through
-            intuition.
             
-            Posterior for continuous frequency hypothesis space?
-              p - positives
-              n - negatives
-              
-              r(f) = f^p(1-f)^n g(f|X) - relative likelyhood.
-              g(f|DX) =  r(f) / integral(0..1)(r(f) df)
-              
-              why?
-                Bayes theorem for continuous hypotheses, and 
-                normalization trick.
+            How does this apply here?
+              iiuc
+                Mathematicians assume properties about continuous probabilities
+                or limits of continuous probabilities.
+                They turn out not to be true under perverse conditions.
+                They conclude prob theory as an extension of logic is wrong.
+                This is bad.
             
-            Complete beta function?
-              intuition?
-                Asumming a uniform prior for frequency,
-                probability of a frequency f given data:
-                  p - positive outcomes
-                  n - negative outcomes
-              
-              formula?
-                g(f|DX) = (p + n + 1)! / (p! * n!) * f^p * (1 - f)^n
-              
-              why?
-                Not sure, algebra ain't my strong side.
+            How to fix this?
+              Jaynes proposes:
+                Every time something new is being done,
+                  e.g. 
+                    Going from working with finite hypotheses to working with
+                    continuous hypotheses.
+                derive everything from the axioms or desiderata, or
+                understand the limitations where it might break down.
+                  And yes I am sort of breaking this by not completely
+                  understanding how Jaynes handles continuous functions.
+          
+          Posterior prob for continuous frequency hypothesis space?
+            p - positive outcome count
+            n - negative outcome count
             
+            r(f) = f^p(1-f)^n g(f|X) - relative likelyhood.
+            g(f|DX) =  r(f) / integral(0..1)(r(f) df)
+            
+            why?
+              Bayes theorem for continuous hypotheses, and 
+              normalization trick.
+          
+          Complete beta function?
+            intuition?
+              Asumming a uniform prior for frequency,
+              probability of a frequency f given data:
+                p - positive outcomes
+                n - negative outcomes
+            
+            formula?
+              g(f|DX) = (p + n + 1)! / (p! * n!) * f^p * (1 - f)^n
+            
+            why?
+              Some combinatorics. 
+              To lazy to derive that.
+          
           4.6.1 Historical Digression
+            Bayes' theorem is part of probability theory as an extension of 
+            logic, not the other way around.
+            
+            
+            
             @Note Draft
-              Bayes's theorem ain't bayes's, as with all discoveries.
-              
-              Probability theory as extending math logic is more general than
-              bayes's theorem.
-              
               de Moivre Laplace theorem?
                 How I understand the theorem?
                   A bernulli process's outcome can be approximated using a 
                   normal.
+                  
                 How Jaynes explains it?
                   For uniform prob for frequencies, the posterior prob tends to
                   a normal distribution around the data frequency.
