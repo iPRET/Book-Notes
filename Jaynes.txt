@@ -1742,11 +1742,37 @@ Probability Theory - The Logic of Science by E.T. Jaynes
               To lazy to derive that.
           
           4.6.1 Historical Digression
+            Bayes theorem wasn't discovered by Bayes.
+            
             Bayes' theorem is part of probability theory as an extension of 
             logic, not the other way around.
             
-            
-            
+            de Moivere-Laplace approximation for frequency hypotheses?
+              The complete beta function can be approximated using a gaussian:
+                intuitive?
+                  The beta function tends to a gaussian around the mean 
+                  p / (p + n), as p and n go to infinity.
+                  
+                  Jaynes says the approximation is very good. Not sure how
+                  good exactly.
+                
+                mathematical?
+                  If
+                    p - number of positives
+                    n - number of negatives
+                  Then
+                    N = p + n - total number of tests
+                    (N + 1)! / (p! * n!) * f^p * (1 - f)^n ~=
+                    favg = p / N
+                    σ = sqrt(favg(1 - favg) / N)
+                      ~= C * normal_dist(mean = favg, stddev = σ)(f) =
+                      = C * e ^ (- ((f - favg) / σ) / 2)
+                    Where C is an normalizing constant.
+                
+                Why do this?
+                  ...
+                
+              
             @Note Draft
               de Moivre Laplace theorem?
                 How I understand the theorem?
