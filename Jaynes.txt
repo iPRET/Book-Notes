@@ -1748,58 +1748,112 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             logic, not the other way around.
             
             de Moivere-Laplace approximation for frequency hypotheses?
-              The complete beta function can be approximated using a gaussian:
-                intuitive?
-                  The beta function tends to a gaussian around the mean 
-                  p / (p + n), as p and n go to infinity.
-                  
-                  Jaynes says the approximation is very good. Not sure how
-                  good exactly.
+              intuitive?
+                The beta function tends to a normal distribution around the 
+                mean p / (p + n), as p and n go to infinity.
                 
-                mathematical?
-                  If
-                    p - number of positives
-                    n - number of negatives
-                  Then
-                    N = p + n - total number of tests
-                    (N + 1)! / (p! * n!) * f^p * (1 - f)^n ~=
-                    favg = p / N
-                    σ = sqrt(favg(1 - favg) / N)
-                      ~= C * normal_dist(mean = favg, stddev = σ)(f) =
-                      = C * e ^ (- ((f - favg) / σ) / 2)
-                    Where C is an normalizing constant.
-                
-                Why do this?
-                  ...
-                
+                Jaynes says the approximation is very good. Not sure how
+                good exactly.
               
-            @Note Draft
-              de Moivre Laplace theorem?
-                How I understand the theorem?
-                  A bernulli process's outcome can be approximated using a 
-                  normal.
+              mathematical?
+                If
+                  p - number of positives
+                  n - number of negatives
+                Then
+                  N = p + n -- total number of tests
+                  μ = p / N -- average
+                  σ = sqrt(μ(1 - μ) / N) -- standard deviation
                   
-                How Jaynes explains it?
-                  For uniform prob for frequencies, the posterior prob tends to
-                  a normal distribution around the data frequency.
+                  (N + 1)! / (p! * n!) * f^p * (1 - f)^n ~=
+                  (skipping the proof)
+                    ~= C * normal_dist(mean = μ, stddev = σ)(f) =
+                    = C * e ^ (- ((f - μ) / σ) / 2)
+                  Where C is an normalizing constant when integrating 
+                  -inf..inf. (It's still a good approximation even though
+                  it assumes frequencies can be outside [0..1])
                 
-                How are they connected?
-                  I guess it might be possible to connect the two using some
-                  symmetry or something.
+              Why?
+                I don't know why it's a very good approximation.
                 
-                The approximation works well when both p and n are large.
+                I think the proof Jaynes shows for why the approximation
+                works in the limit doesn't work.
                 
-                The stddev of the approximation is proportional to N^(-0.5).
+                Imo he doesn't show that the next terms after (f - μ)^2 in
+                the taylor series expansion of log(g(f)) don't become more
+                significant as n grows larger.
                 
-                The stddev is a property of our knowledge, not of the world.
+                Maybe it's just an obvoious fact from higher math that most
+                non-weird functions don't act this way, so while it's not
+                a proof, it's a good intuitive argument?
                 
-                The principles we have so far allow to think about much more
-                complicated situations than just binary data and unchanging
-                frequencies.
-                  like
-                    Detecting changes in frequency.
-                    Using more than just binary data.
-          
+              Why do this?
+                A normal distribution has some useful properties:
+                  Assuming big enough n and p, it's relatively easy to
+                  caluclate intervals with an x% likelihood of containing
+                  the correct answer.
+                  
+                  Because the interval within the same amount of standard 
+                  deviations from the mean [μ - k * σ, μ + k * σ] contains 
+                  the same amount of probability for all normal distributions.
+                    e.g.
+                      1:1     = 50%   -- k = 0.68
+                      1:10   ~= 90%   -- k = 1.65
+                      1:100  ~= 99%   -- k = 2.58
+                      1:1000 ~= 99.9% -- k = 3.29
+                      These values can be caluclated by integrating a norm
+                      distribution, which is somewhat complicated.
+                      But all math libraries contain functions for that.
+                
+                How does the stddev change depending on test count?
+                  Assuming the frequency stays the same,
+                  The stddev is proportional to 1 / sqrt(p + n).
+                    i.e. You need 4 times as much data to halve the stddev.
+              
+            So far only methods for calculation of hypothesis probabilities
+            from a hypothesis space on a 1D line, given binary data.
+            But these principles can be used for all types of different data
+            and hypothesis spaces.
+              e.g.
+                The hypotheses and data could have multiple dimensions
+                somehow connected.
+                
+                The hypothesis could can take time into account
+                  e.g.
+                    has the frequency of positives changed?
+                
+                The data can be continuous.
+                  Though this requires some justification I think.
+                
+                The hypothesis space doesn't even have to be a simple R^n
+                type of space, it can be a tree-like structure or a
+                fractal or something like that.
+                  Though the fractal like any infinite thing would require 
+                  some justification.
+        
+        4.7 Simple and compound (or composite) hypotheses
+          What's a parameter space?
+            Say we have a hypothesis, which has some parameters.
+              e.g. Frequency of positives.
+            The parameter space is the set of all parameters that an agent
+            considers possible.
+              e.g. f e [0..1]
+            
+          @Note Draft
+            We might not care about calculating the whole parameter space.
+            In more AI-like problems we might be interested in the probability
+            of a subspace instead.
+            
+            What's a nuisance parameter?
+              A hypothesis parameter whose value we don't actually care about, 
+              which is used to calculate something we do care about.
+                e.g.
+                  Imagine a rigged coin.
+                  We want to take the bet if P(Heads|X) > 0.5, but don't care
+                  about the precise prob.
+            
+            
+            
+        
     Appendix B
       This appendix contains
         Explanations of some important notation nuances.
@@ -1992,8 +2046,11 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           It's ok to not look at degenerate cases that are unlikely to show up.
           
           It's ok to make the theorem just general enough to be usable.
-            i.e. Wasting effort on something that won't get used anyway is bad.
-        
+            i.e. 
+              Wasting effort on something that won't get used anyway is bad.
+              And
+              It's bad do sacrifice practicality for mathematical generality.
+          
           why?
             It just saves effort when writing up proofs,
             and usually makes them easier to understand.
