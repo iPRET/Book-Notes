@@ -1837,23 +1837,58 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             The parameter space is the set of all parameters that an agent
             considers possible.
               e.g. f e [0..1]
+          
+          What's a nuisance parameter?
+            A hypothesis parameter whose value we don't actually care about, 
+            which is used to calculate something we do care about.
+              e.g.
+                Imagine a rigged coin.
+                We want to take the bet if P(Heads|DX) > 0.5, but don't care
+                about the precise prob.
             
-          @Note Draft
-            We might not care about calculating the whole parameter space.
-            In more AI-like problems we might be interested in the probability
-            of a subspace instead.
+          How to calculate the probability of any subspace given data?
+            You can always just sum or integrate over the subspace conditional
+            on the data.
             
-            What's a nuisance parameter?
-              A hypothesis parameter whose value we don't actually care about, 
-              which is used to calculate something we do care about.
-                e.g.
-                  Imagine a rigged coin.
-                  We want to take the bet if P(Heads|X) > 0.5, but don't care
-                  about the precise prob.
+            So what?
+              This is very hard to justify or do in non-bayesian statistics,
+              but is very natural in Jaynsean prob theory.
+          
+        4.8 Comments
+          4.8.1 Etymology
+            The logarithm of odds/evidence, is a very useful term.
             
+            Stories on how people have tried to name it.
             
+            How Jaynes proposes naming it?
+              The name of the quantity would be evidence.
+              The name of the unit would a decibel, when using a base 10 log.
             
-        
+            What do people mean by logits and logistic function?
+              Alternative naming to Jaynes's that people use.
+              
+              The logistic function is what converts probability to evidence.
+              A logit is the unit of evidence.
+          
+          4.8.2 What have we accomplished?
+            @Note Draft
+              Jaynes says that
+                The problems solved in chap 4 might seem simple, because of
+                how simply they were solved in this book.
+                
+                This is because of how the theory was developed.
+                
+                For non-bayesian approaches solving these problems would be
+                a lot harder.
+                  e.g.
+                    Multiple hypothesis testing is veeeery sketch in
+                    non-bayesian stats.
+                    
+                    Calculating the probability of a subset of the hypothesis
+                    space is sketchy.
+                      @Is it?
+              
+          
     Appendix B
       This appendix contains
         Explanations of some important notation nuances.
