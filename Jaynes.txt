@@ -1881,13 +1881,23 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                 For non-bayesian approaches solving these problems would be
                 a lot harder.
                   e.g.
-                    Multiple hypothesis testing is veeeery sketch in
-                    non-bayesian stats.
+                    Multiple hypothesis testing is veeeery sketch/non-existant
+                    in non-Bayesian statistics.
                     
                     Calculating the probability of a subset of the hypothesis
-                    space is sketchy.
-                      @Is it?
+                    space is somewhat awkward in classic non-Bayesian stats.
               
+                This is a result of not thinking of randomness as a 
+                property of a system, but as incomplete information.
+                
+                Jaynes says all of these results come naturally from the fact
+                that we assumed prob theory is an extension of logic.
+                
+                Also classic prob theory messes up by arbitrarily extending
+                prob theory to infinte sets, not as a result of the axioms.
+                
+                
+                
           
     Appendix B
       This appendix contains
