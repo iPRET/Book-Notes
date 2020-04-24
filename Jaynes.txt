@@ -11,6 +11,8 @@ Probability Theory - The Logic of Science by E.T. Jaynes
   
   Introduction
     What does the book claim it's special with?
+      It's quite unconventional.
+      
       Objectively roasts Frequentists
         Shows that in many practical applications Bayesianism works and
         Fequentism doesn't.
@@ -19,7 +21,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
         Shows Frequentist methods in many cases are defined without 
         explanations for why they're like that.
         
-        Prooves there's only one type of inference, under reasonable claims.
+        Proves there's only one type of inference, under reasonable claims.
         Shows statistical methods can be derived from these most basic claims.
       
       Avoids working with infinite sets to avoid paradoxes,
@@ -31,11 +33,23 @@ Probability Theory - The Logic of Science by E.T. Jaynes
         clarity of arguments and
         practicality.
         
-        While is much stricter at prooving based on axioms that statistical
-        methods are unique and optimal.
+        At the same time is much stricter at proving based on axioms that 
+        statistical methods are unique and optimal.
         
         (The hype is real)
+    
+    @Note Draft
+      Book describes inference.
+      The prob theory explained in this book is more practical than classic
+      statistics.
+        The book resolves many known problems in classic statistics.
+        The book contains new results which would be very hard to prove using
+        classic statistics.
       
+      Jaynes has been obsessed with bayesian prob theory for 40 years.
+      Polya showed that common sense had some very concrete rules about how 
+      stuff becomes more or less plausible.
+    
   Part 1. Principles and elementary applications
     1. Plausible reasoning
       1.1 Deductive and plausible reasoning
