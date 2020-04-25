@@ -3,7 +3,7 @@ Todo
   Rewrite P(A|B) derivation.
 
 Note Notes
-  iiuc - Not completely sure, but if I understand correctly...
+  iiuc - A bit unsure(Like below 80%), but if I understand correctly...
 
 Probability Theory - The Logic of Science by E.T. Jaynes
   Why this book good?
@@ -39,17 +39,83 @@ Probability Theory - The Logic of Science by E.T. Jaynes
         (The hype is real)
     
     @Note Draft
-      Book describes inference.
-      The prob theory explained in this book is more practical than classic
-      statistics.
-        The book resolves many known problems in classic statistics.
-        The book contains new results which would be very hard to prove using
-        classic statistics.
+      Why might You be interested in this book?
+        Book describes inference.
+        The prob theory explained in this book is more practical than classic
+        statistics.
+          The book resolves many known problems in classic statistics.
+          The book contains new results which would be very hard to prove using
+          classic statistics.
       
-      Jaynes has been obsessed with bayesian prob theory for 40 years.
-      Polya showed that common sense had some very concrete rules about how 
-      stuff becomes more or less plausible.
-    
+      History
+        Jaynes has been obsessed with bayesian prob theory for 40 years.
+        iiuc
+          G. Pólya showed that common sense seemed to have some very 
+          strong concrete rules about how stuff becomes more or less plausible.
+        iiuc
+          In addition to G. Pólya's rules,
+          R. T. Cox made up some rules about consistency of assigning and 
+          acting on probabilities, which seem quite rational.
+          He then proved that any way of thinking and acting on probabilities
+          is isomorphic to the way it is done in this book,
+          or it breaks on of Pólyas common sense rules, or Cox's rational
+          consistency rules.
+          
+          What does isomorphic mean?
+            Roughly
+              I'll call a "thing" a set and functions defined on that set.
+              
+              Two things are isomorphic if You can rename the things in the
+              sets so that both things become equal.
+              Name colisions are not allowed
+              
+              e.g.
+                Thing 1 - set S = {A, B}, function f:{A -> B, B -> A}
+                Thing 2 - set S2 = {0, 1}, function g:{0 -> 1, 1 -> 0}
+                If You rename
+                  A -> 0
+                  B -> 1
+                  f -> g
+                  S -> S2
+                Then both things become equivalent.
+                
+                Thing 1 - set S = R, function + (The plus sign that we all know
+                and love)
+                Thing 2 - set S2 = R+, function * (The multiplication sign
+                we all know and love)
+                If we take thing 1
+                and rename
+                  All numbers x -> e ^ x
+                  + -> *
+                  S -> S2
+                Then thing 1 becomes thing 2.
+                
+                Anti example
+                Thing 1 - set S = {0}
+                Thing 2 - set S2 = {0, 1}
+                Since name collisions aren't allowed, You can't give two things
+                the same name.
+                
+                Anti example
+                Thing 1 - set S = {0, 1}, f:{0 -> 0, 1 -> 1}
+                Thing 2 - set S2 = {0, 1}, f:{0 -> 1, 1 -> 0}
+                I can't think of a way to rename them.
+                Probably requires some advanced proof to show they're not
+                isomorphic.
+              
+              So what?
+                This ~sort of justifies every time You said somethin like:
+                  From symmetry this property holds for the other case too...
+                  
+                If You prove something for one thing, it's true in any
+                isomorphic thing.
+              
+        iiuc
+          This means there's exactly one way of thinking about and acting on
+          probabilities.
+          Everything else is isomorphic to it, or breaks some strong rule of
+          common sense or.
+          
   Part 1. Principles and elementary applications
     1. Plausible reasoning
       1.1 Deductive and plausible reasoning
