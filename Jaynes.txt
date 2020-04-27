@@ -60,18 +60,31 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           to how the possiblity of something seems to changes.
           He didn't know how to describe it with numbers.
           He had rules for what makes something more or less possible.
-            @I might be wrong though.
-        
+          @I might be wrong though.
+
+          Possibility here is intended to mean something like -
+            How likely is something to be true?
+              e.g.
+                What's the possibility that this man is guilty of crime?
+                What's the possibility of the next coinflip being heads?
+          and not -
+            What's the proportion of positive agains the total cases?
+              (Which is the interpretation in classic stats)
+              e.g.
+                What's the proportion/frequency of heads in the n coinflips?
+                What's the proportion/frequency of throwing double six's 
+                in monopoly?
+          
           In addition to G. Pólya's rules,
           R. T. Cox made up some rules about consistency of assigning and 
           acting on probabilities.
           
           He then proved that any way of thinking and acting on probabilities
           is isomorphic to the way it is done in this book,
-          or it breaks on of Pólyas common sense rules, or Cox's rational
+          or it breaks one of Pólyas common sense rules, or Cox's rational
           consistency rules.
           
-          These rules are described in chap 1 and 2.
+          These rules and the proof are discribed in chap 1 and 2.
           
           What does isomorphic mean?
             Roughly
@@ -122,31 +135,21 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                 This ~sort of justifies every time You said somethin like:
                   From symmetry this property holds for the other case too...
               
-        The resulting theory is pretty much the same as classic stats for the
-        most part.
+        The resulting theory gives pretty much the same results as classic
+        stats, when dealing with frequencies.
         
-        But it's more general and gives useful results less awkwardly in some
-        areas where classic stats struggles.
-          Because classic stats are restricted to interpreting probabilities
-          as frequencies and random variables.
-        
-        Because the concept of incomplete information seems to fit scientific
-        inference much better than the concept of randomness.
-        So Jaynes has spent some time trying to describe Pólya's results using
-        numbers.
-        
-        Over the years Jaynes has given lectures explaining this stuff.
-        The material grew, until a series of lectures could not hold it anymore
-        so he made a book.
-        Why did Jaynes say this?
-          mbg to say that he's spent a lot of time on this stuff?
-          @Might mean he was also quite emotionally invested in the thing.
+        But it also gives useful results less awkwardly in situations where
+          interpreting possiblity as 
+            You having partial knowledge about the truth
+          makes more sense than 
+            interpreting it as a frequency.
         
         Jaynes says he's inspired by H. Jeffreys - 
           a guy who was important in the Bayesian game.
         
-        Many struggles classic stats have had can be explained and solved using
-        this book's prob theory.
+        The book is useful
+          Many struggles classic stats have are explained and solved using
+          this book's prob theory.
         The book actually does this.
         The book resolves many struggles Bayesianism has had in the past.
         Why did Jaynes say this?
