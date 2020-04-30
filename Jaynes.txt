@@ -4,7 +4,7 @@ Todo
 
 Note Notes
   iiuc - A bit unsure(Like below 80%), but if I understand correctly...
-  mbg - A bit unsure, but My best guess would be...
+  mbg - quite unsure, but My best guess would be something like...
 
 Probability Theory - The Logic of Science by E.T. Jaynes
   Why this book good?
@@ -45,119 +45,149 @@ Probability Theory - The Logic of Science by E.T. Jaynes
         The prob theory explained in this book is more practical than classic
         statistics.
           The book resolves many known problems in classic statistics.
-          The book contains new results which would be very hard to prove using
+          The book contains new results which would be hard to prove using
           classic statistics.
       
       History
         What was the point of this subchapter?
           Answering the question -
-          why You should trust Jaynes?
+          Why You should trust Jaynes?
         
-        Jaynes has been obsessed with bayesian prob theory for 40 years.
-        
-        iiuc Jaynes's main sources are:
-          G. Pólya showed that there were some strong common sense rules as
-          to how the possiblity of something seems to changes.
-          He didn't know how to describe it with numbers.
-          He had rules for what makes something more or less possible.
-          @I might be wrong though.
+        The book actually contains useful results.
+          The resulting theory gives pretty much the same results as classic
+          stats, where it works.
+          
+          Many struggles classic stats have, are explained and solved using the
+          book's prob theory.
+          
+          Many Bayesian struggles of the past are explained and solved in the 
+          book.
+          
+          The book contains new useful results hard or impossible to prove in 
+          classic stats.
+          
+        The book is quite rigorous in a practical sense.
+          It starts off with some reasonable rules/axioms about how
+          common sense and acting on probabilities should idealy work.
+          
+          Then proves that there's only one way of thinking and doing prob
+          theory, based on the axioms.
+          
+          And notes where it's using approximations or assumptions, which 
+          might cause confusion or paradoxes if not noted.
+          
+          Jaynes has spent like 40 years giving lectures and thinking about 
+          the details and consequences of this.
+          
+        Why are the rules/axioms Jaynes accepts trustworthy?
+          The resulting theory works like classic stats, 
+            when the frequency interpretation of possibility makes sense.
+          But the theory also gives useful results much less awkwardly in 
+          situations where
+            interpreting possiblity as 
+              You having partial knowledge about the truth
+            makes more sense than 
+              interpreting it as a frequency.
+          
+          As to the official explanation iiuc:
+            G. Pólya showed that there were some strong common sense rules as
+            to how the possiblity of something seems to changes.
+            He didn't know how to describe it with numbers.
+            He just had rules for what makes something more or less possible.
 
-          Possibility here is intended to mean something like -
-            How likely is something to be true?
-              e.g.
-                What's the possibility that this man is guilty of crime?
-                What's the possibility of the next coinflip being heads?
-          and not -
-            What's the proportion of positive agains the total cases?
-              (Which is the interpretation in classic stats)
-              e.g.
-                What's the proportion/frequency of heads in the n coinflips?
-                What's the proportion/frequency of throwing double six's 
-                in monopoly?
-          
-          In addition to G. Pólya's rules,
-          R. T. Cox made up some rules about consistency of assigning and 
-          acting on probabilities.
-          
-          He then proved that any way of thinking and acting on probabilities
-          is isomorphic to the way it is done in this book,
-          or it breaks one of Pólyas common sense rules, or Cox's rational
-          consistency rules.
-          
-          These rules and the proof are discribed in chap 1 and 2.
-          
-          What does isomorphic mean?
-            Roughly
-              I'll call a "thing" a set and functions defined on that set.
-              
-              Two things are isomorphic if You can rename the things in the
-              sets so that both things become equal.
-              Name colisions are not allowed
-              
-              e.g.
-                Thing 1 - set S = {A, B}, function f:{A -> B, B -> A}
-                Thing 2 - set S2 = {0, 1}, function g:{0 -> 1, 1 -> 0}
-                If You rename
-                  A -> 0
-                  B -> 1
-                  f -> g
-                  S -> S2
-                Then both things become equivalent.
+            Possibility here is intended to mean something like -
+              How likely is something to be true?
+                e.g.
+                  What's the possibility that this man is guilty of crime?
+                  What's the possibility of the next coinflip being heads?
+            and not -
+              What's the proportion of positive agains the total cases?
+                (Which is the interpretation in classic stats)
+                e.g.
+                  What's the proportion/frequency of heads in the n coinflips?
+                  What's the proportion/frequency of throwing double six's 
+                  in monopoly?
+            
+            In addition to G. Pólya's rules,
+            R. T. Cox made up some rules about consistency of assigning and 
+            acting on probabilities.
+            He then proved that any way of thinking and acting on 
+            probabilities is isomorphic to the way it is done in this book,
+            or it breaks one of Pólyas common sense rules, or Cox's rational
+            consistency rules.
+            
+            These rules and the proof are described in chap 1 and 2.
+            
+            What does isomorphic mean?
+              Roughly?
+                Two things are called isomorphic,
+                if You can prove that they work in the same way, but have
+                different names assigned to stuff.
+                Then if You prove something is true in one thing,
+                by analogy it's true in the other thing.
+            
+              Slightly more formally?
+                I'll call a "thing" a set and functions defined on that set.
                 
-                Thing 1 - set S = R, function + (The plus sign that we all know
-                and love)
-                Thing 2 - set S2 = R+, function * (The multiplication sign
-                we all know and love)
-                If we take thing 1
-                and rename
-                  All numbers x -> e ^ x
-                  + -> *
-                  S -> S2
-                Then thing 1 becomes thing 2.
+                Two things are isomorphic if You can rename the things in the
+                sets so that both things become equal.
+                Name colisions are not allowed
                 
-                Anti example
-                Thing 1 - set S = {0}
-                Thing 2 - set S2 = {0, 1}
-                Since name collisions aren't allowed, You can't give two things
-                the same name.
-                
-                Anti example
-                Thing 1 - set S = {0, 1}, f:{0 -> 0, 1 -> 1}
-                Thing 2 - set S2 = {0, 1}, g:{0 -> 1, 1 -> 0}
-                I can't think of a way to rename them.
-                Probably requires some advanced proof to show they're not
-                isomorphic.
+                e.g.
+                  Thing 1 - set S = {A, B}, function f:{A -> B, B -> A}
+                  Thing 2 - set S2 = {0, 1}, function g:{0 -> 1, 1 -> 0}
+                  If You rename
+                    A -> 0
+                    B -> 1
+                    f -> g
+                    S -> S2
+                  Then both things become equivalent.
+                  
+                  Thing 1 - set S = R, function + (The plus sign that we all 
+                  know and love)
+                  Thing 2 - set S2 = R+, function * (The multiplication sign
+                  we all know and love)
+                  If we take thing 1
+                  and rename
+                    All numbers x -> e ^ x
+                    + -> *
+                    S -> S2
+                  Then thing 1 becomes thing 2.
+                  
+                anti e.g.
+                  Thing 1 - set S = {0}
+                  Thing 2 - set S2 = {0, 1}
+                  Since name collisions aren't allowed, You can't give two 
+                  numbers the same name.
+                  
+                  Thing 1 - set S = {0, 1}, f:{0 -> 0, 1 -> 1}
+                  Thing 2 - set S2 = {0, 1}, g:{0 -> 1, 1 -> 0}
+                  I can't think of a way to rename them.
+                  Probably requires some advanced proof to show they're not
+                  isomorphic.
               
-              So what?
-                If You prove something for one thing, it's true in any
-                isomorphic thing.
-                
-                This ~sort of justifies every time You said somethin like:
-                  From symmetry this property holds for the other case too...
-              
-        The resulting theory gives pretty much the same results as classic
-        stats, when dealing with frequencies.
-        
-        But it also gives useful results less awkwardly in situations where
-          interpreting possiblity as 
-            You having partial knowledge about the truth
-          makes more sense than 
-            interpreting it as a frequency.
-        
-        Jaynes says he's inspired by H. Jeffreys - 
-          a guy who was important in the Bayesian game.
-        
-        The book is useful
-          Many struggles classic stats have are explained and solved using
-          this book's prob theory.
-        The book actually does this.
-        The book resolves many struggles Bayesianism has had in the past.
-        Why did Jaynes say this?
-          mbg to show that prob theory as described in the book is useful.
-        
-        Jaynes aparently shows some pride in the fact that he's been obsessing
-        over these questions for 30 years.
-        
+              How does this apply to the problem at hand?
+                mbg
+                  If You had a system with
+                    a set of logical statements, and
+                    a set of actions that You'd take if a statement is more
+                    possible than a threshold you pick beforehand
+                  then, 
+                    as long as you follow Pólya's and Cox's rules,
+                  a function that assigns actions to systems like these
+                    (Not sure if a function like this is allowed to exist
+                    in classic set theory)
+                  would assign actions exactly how any other function
+                  that follows Pólya's and Cox's rules would.
+                  @Why is it not called equivalence instead of isomorphism
+                  then?
+                    I guess because we do all of our calculations one way,
+                    but it could be possible to do it another way, that
+                    would bring about the exact same action assignment.
+                    So our assigned intermediate possibilities 
+                @Maybe I should just come back to this after rereading chap
+                1&2
+          
   Part 1. Principles and elementary applications
     1. Plausible reasoning
       1.1 Deductive and plausible reasoning
