@@ -167,26 +167,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                   isomorphic.
               
               How does this apply to the problem at hand?
-                mbg
-                  If You had a system with
-                    a set of logical statements, and
-                    a set of actions that You'd take if a statement is more
-                    possible than a threshold you pick beforehand
-                  then, 
-                    as long as you follow Pólya's and Cox's rules,
-                  a function that assigns actions to systems like these
-                    (Not sure if a function like this is allowed to exist
-                    in classic set theory)
-                  would assign actions exactly how any other function
-                  that follows Pólya's and Cox's rules would.
-                  @Why is it not called equivalence instead of isomorphism
-                  then?
-                    I guess because we do all of our calculations one way,
-                    but it could be possible to do it another way, that
-                    would bring about the exact same action assignment.
-                    So our assigned intermediate possibilities 
-                @Maybe I should just come back to this after rereading chap
-                1&2
+                You know, I got no clue.
           
   Part 1. Principles and elementary applications
     1. Plausible reasoning
