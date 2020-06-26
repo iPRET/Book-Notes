@@ -10,7 +10,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
   Why this book good?
     E.Y. says it's sexy.
   
-  Introduction
+  "Preface"
     Why might You be interested in this book?
       Jaynes says:
         Book describes inference.
@@ -20,7 +20,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           The book contains new results which would be hard to prove using
           classic statistics.
       
-    History
+    "History"
       What was the point of this subchapter?
         Answering the question -
         Why You should trust Jaynes?
@@ -102,11 +102,10 @@ Probability Theory - The Logic of Science by E.T. Jaynes
               by analogy it's true in the other thing.
             
               @I'm a bit unsure about what isomorphism means in the book.
-              @I can imagine multiple ways of defining isomorphism based on
-              what stuff can be changed or must be left constant.
+              @It can mean a lot of things based on what stuff can change
+              and what has to be left constant.
             
-            Slightly more formal example of how it could be defined?
-              
+            Slightly more formal example of how isomorphism could be defined?
               I'll call a "thing" a set and functions defined on a set.
               
               Two things are isomorphic if You can rename the elements of the
@@ -146,29 +145,61 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                 Probably requires some advanced proof to show they're not
                 isomorphic.
                   
-    Foundations
+    "Foundations"
+      What was the point of this chapter?
+        iiuc
+          Trying to explain where Jaynes got the main ideas used to guide
+          deriving all the stuff.
+      
+      What are the most foundational ideas used for deriving Jaynes's prob
+      theory?
+        Probability theory as an extension of logic
+        What's Probability theory as an extension of logic?
+          iiuc
+            The idea that prob theory should be able to assign probabilities
+            to systems of logical statements and observations about those 
+            systems.
+        
+            Why does Jaynes call it that?
+              Because it extends the possible values of logic from false 
+              and true, to a bunch of possibility values between.
+          
+            Why is that important?
+              In classic probability theory it's often very awkward to
+              assign probabilities to systems of logical statements,
+              yet it is useful in practice.
+        
+        Pólya's and Cox's axioms/rules
+        
+        The finite sets policy
+        What's the finite sets policy?
+          The idea that infinite sets shouldn't have properties assigned
+          to them, at least in probability theory.
+          
+          The way Jaynes proposes modeling things with infinite sets, is to
+          always define a limiting process of finite systems, and see whether
+          the properties of interest converge/work.
+            What does limiting process mean?
+              You just look at larger and larger systems constructed by some
+              algorithm, and see whether a property of the system gets closer
+              and closer to some value.
+          
+          Why?
+            Jaynes says the classic approach of assigning properties to 
+            infinite sets causes more paradoxes than always defining a
+            limiting process.
+      
+      Some comparisons
+        The Kolmogorov axioms of probabilitiy theory can be roughly derived 
+        from Pólya's and Cox's work. At least where the axioms are applicable.
+          
+        deFinetti's prob theory differs in handling infinite sets, that causes 
+        paradoxes.
+    
+    "Comparisons"
       @Note Draft
-        Jaynes says:
-          iiuc
-            Classic probability theory lacks tools for assigning probabilities
-            to logical statements, when the probability doesn't represent a
-            fequency.
-          
-          The Kolmogorov axioms of probabilitiy theory can be derived from
-          Pólya's and Cox's work.
-          
-          Jayne's and deFinetti's prob theories disagree in how they handle
-          infinite sets, and Jayne's thinks deFinetti's system messed up.
-          
-          iiuc
-            Jaynes doesn't assume properties for infinite sets because that
-            causes paradoxes.
-            
-            Instead when working with infinite sets, he always explicitly
-            defines a limiting process of finite systems.
-            
-            @More detail in the appendix
-          
+        
+    
   Part 1. Principles and elementary applications
     1. Plausible reasoning
       1.1 Deductive and plausible reasoning
