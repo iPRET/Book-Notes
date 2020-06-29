@@ -201,11 +201,22 @@ Probability Theory - The Logic of Science by E.T. Jaynes
     
     "Comparisons"
       @Note Draft
-        Jaynes likes bayesianism
+        What was the point of this chapter?
+          iiuc
+            Explain how prob theory philosophies compare when looking at the
+            problems they can solve.
+        
+        Necessary conditions for a problem to be solvable by frequentism?
+          iiuc
+            The problem has to be a repeatable random experiment.
+            It is assumed there is no prior information about the outcomes.
+            
+          
+        Jaynes likes bayesianism much more than frequentism
         
         iiuc
-          Computer simulations can show that bayesian methods are just superior
-          to frequentist methods.
+          Computer simulations can show that bayesian methods just work, and
+          work better in cases where frequentism fails.
         
         Jaynes says probability theory as an extension of logic is a more 
         general idea than bayesianism or frequentism.
@@ -246,8 +257,7 @@ Probability Theory - The Logic of Science by E.T. Jaynes
                 A problem where:
                   The hypothesis space is known,
                   The prior probabilities of hypotheses are known.
-                  The model of what observations are likely given hypotheses 
-                  are known.
+                  The model of what's likely given hypotheses is known.
         
         Bayesian methods allow to solve much more complicated problems than
         frequentist methods.
@@ -255,10 +265,16 @@ Probability Theory - The Logic of Science by E.T. Jaynes
         iiuc
           The principle of maximum entropy is something that might be used when
           a problem is not yet well developed.
+            @What's the principle of maximum entropy?
         
-        ?
+          The principle of maximum entropy requires making very little
+          assumptions about the problem, and is useful in cases where very
+          little is known about the problem.
+            @What's knowledge and assumptions mean in this context?
         
-         
+          The principle of maximum entropy requires knowing the sample space.
+            @What does that even mean?
+        
   Part 1. Principles and elementary applications
     1. Plausible reasoning
       1.1 Deductive and plausible reasoning
