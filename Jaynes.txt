@@ -203,15 +203,69 @@ Probability Theory - The Logic of Science by E.T. Jaynes
       @Note Draft
         What was the point of this chapter?
           iiuc
-            Explain how prob theory philosophies compare when looking at the
+            Explain how prob theory philosophies?? compare when looking at the
             problems they can solve.
         
-        Necessary conditions for a problem to be solvable by frequentism?
-          iiuc
-            The problem has to be a repeatable random experiment.
-            It is assumed there is no prior information about the outcomes.
-            
+        What questions are in practice important here?
+          What problems can each philosophy solve?
+          When does each philosophy break down?
+          Do the philosophies dominate or compliment eachother?
+        
+        @Ok maybe I should just go through and try to note when any of the
+        questions are discussed.
+        
+        What philosophies are discussed?
+          Frequentism
+          Bayesianism
+          Probability as an extension of logic
+          Maximum entropy
           
+        iiuc
+          Bayesian methods can solve many problems better than frequentism.
+          This can be verified with computer simulations.
+        
+        Prob theory as extended logic can solve all problems frequentism
+        and bayesianism can solve.
+        It can also solve some problems that frequentism and bayesianism can't.
+          
+        @Are there problems solvable by frequentism and not by Bayesianism?
+          
+        How is Bayesianism better than frequentism?
+          Frequentism requires problems to be interpretable as random 
+          experiments, bayesianism doesn't.
+          
+          Bayesianism can take prior information into account, frequentism
+          can't.
+            @What does that even mean?
+          
+          iiuc
+            Bayesianism provides some ways of simplifying the problem, if
+            You're only interested in some information about the problem.
+          
+          Bayesianism can use all the information from the data optimally
+          for evaluating hypotheses, while frequentism can't do that if
+          a good enough statistic doesn't exist.
+          
+          In Bayesianism methods for evaluating hypotheses come as a
+          consequence of the axioms/rules, in frequentism hypothesis tests
+          must be chosen from intuition, which is a bit arbitrary.
+          
+        @Are there ways in which frequentism is better than Bayesianism?
+        
+        
+        
+        How is Bayesianism better than frequentism?
+          Hypotheses can be given priors.
+          Doesn't require a problem to be interpreted as a random experiment.
+          
+        What problems can each solve?
+          Frequentism can solve problems where
+            Requirements
+              The problem can be interpreted as a random experiment,
+            Problem
+              Prior information about what is being calculated is ignored.
+            
+        
         Jaynes likes bayesianism much more than frequentism
         
         iiuc
