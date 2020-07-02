@@ -4,7 +4,8 @@ Todo
 
 Note Notes
   iiuc - A bit unsure(Like below 80%), but if I understand correctly...
-  mbg - quite unsure, but My best guess would be something like...
+  mbg - Quite unsure, but My best guess would be something like...
+  tbh idk/tbh idu - To be Honest I don't know/didn't understand...
 
 Probability Theory - The Logic of Science by E.T. Jaynes
   Why this book good?
@@ -200,48 +201,102 @@ Probability Theory - The Logic of Science by E.T. Jaynes
         paradoxes.
     
     "Comparisons"
-      @Note Draft
-        What was the point of this chapter?
-          iiuc
-            Explain how prob theory philosophies?? compare when looking at the
-            problems they can solve.
+      What was the point of this chapter?
+        iiuc
+          Explain how prob theory ??philosophies compare when looking at the
+          problems they can solve.
         
+      @I might want to rewrite these notes once I understand better.
+        
+      @Note Draft
         What questions are in practice important here?
           What problems can each philosophy solve?
           When does each philosophy break down?
-          Do the philosophies dominate or compliment eachother?
-        
-        @Ok maybe I should just go through and try to note when any of the
-        questions are discussed.
+          Do the philosophies overlap or compliment eachother?
         
         What philosophies are discussed?
           Frequentism
           Bayesianism
           Probability as an extension of logic
           Maximum entropy
-          
-        iiuc
-          Bayesian methods can solve many problems better than frequentism.
-          This can be verified with computer simulations.
         
-        Prob theory as extended logic can solve all problems frequentism
-        and bayesianism can solve.
-        It can also solve some problems that frequentism and bayesianism can't.
+        By "better" I mean "more effectively" here.
+        
+        How do the philosophies overlap in the problems they can solve?
+          iiuc
+            Frequentism is the most narrow
+            Bayesianism solves many problems better than frequentism.
           
-        @Are there problems solvable by frequentism and not by Bayesianism?
+          I suspect that Bayesianism includes frequentism where it works,
+          thought that wasn't clearly stated, so it might not be.
           
-        How is Bayesianism better than frequentism?
-          Frequentism requires problems to be interpretable as random 
-          experiments, bayesianism doesn't.
-          
-          Bayesianism can take prior information into account, frequentism
-          can't.
-            @What does that even mean?
+          Prob theory as an extension of logic solves includes all problems
+            frequentism and 
+            Bayesianism can solve.
+            It also solves some problems they can't.
           
           iiuc
-            Bayesianism provides some ways of simplifying the problem, if
-            You're only interested in some information about the problem.
+            Maximum entropy can solve 
+              all the problems Bayesianism can,
+              and something extra.
+            But Bayesianism solves them better than maximum entropy, if the 
+            problem is "well developed".
+          What does well developed mean?
           
+          tbh idu how 
+            maximum entropy and 
+            prob theoryas an extension of logic 
+          overlap.
+        
+        Limitations of philosophies?
+          Frequentism requires that
+          The problem is interpretable as a repeatable random experiment,
+          which is rarely true.
+          iiuc
+            Other philosophies don't have this limitation.
+            
+          Frequentism works baddly, when
+          Prior information is important.
+            @What does that mean?
+              tbh idk.
+          iiuc
+            Other philosophies don't have this limitation.
+            
+          iiuc
+            Other philosophies, but not frequentism, allow
+            "elimination of nuisance parameters".
+            What's that?
+              iiuc
+                Some ways of simplifying the calculations, if You're only
+                interested in some information about the problem, but not all.
+          
+          To use Bayesianism You have to know a problem's
+            model,
+            sample space,
+            hypothesis space,
+            prior probabilities.
+            sampling distribution.
+            
+            @What does that even mean?
+              tbh idk.
+          
+          @Does frequentism require this?
+            tbh idk.
+          Maximum entropy doesn't require knowing the model and sampling
+          distribution.
+          
+          @Limitations of prob theory as an extension of logic?
+            I suspect similar to Bayesianism and frequentism, though that
+            wasn't clearly stated.
+          
+          To use maximum entropy, You have to know a problem's
+            sample space,
+            hypothesis space,
+            prior probabilities.
+          Jaynes suspects there might exist principles which don't even require
+          that.
+          
+        How is Bayesianism better than frequentism?
           Bayesianism can use all the information from the data optimally
           for evaluating hypotheses, while frequentism can't do that if
           a good enough statistic doesn't exist.
@@ -250,84 +305,45 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           consequence of the axioms/rules, in frequentism hypothesis tests
           must be chosen from intuition, which is a bit arbitrary.
           
+          Some important tools used in "frequentist statistics" require
+          extra assumptions that don't come from the axioms, and they break
+          down at the extremes.
+            e.g.
+              Unbiased estimators
+              Tail-area hypothesis tests
+              Confidence intervals
+              
+          All bayesian tools can be derived straight from the axioms.
+          
+          Bayesian hypothesis evaluation can be done much more easily than
+          in frequentism, so it can be applied to much harder problems.
+        
         @Are there ways in which frequentism is better than Bayesianism?
+          tbh idu.
         
-        
-        
-        How is Bayesianism better than frequentism?
-          Hypotheses can be given priors.
-          Doesn't require a problem to be interpreted as a random experiment.
-          
-        What problems can each solve?
-          Frequentism can solve problems where
-            Requirements
-              The problem can be interpreted as a random experiment,
-            Problem
-              Prior information about what is being calculated is ignored.
+        Bayesianism doesn't work when a problem is not "well developed".
+          What does "well developed" mean?
+            The problem has a known
+              model,
+              sample space,
+              hypothesis space,
+              prior probabilities,
+              sampling distribution.
             
-        
-        Jaynes likes bayesianism much more than frequentism
-        
-        iiuc
-          Computer simulations can show that bayesian methods just work, and
-          work better in cases where frequentism fails.
-        
-        Jaynes says probability theory as an extension of logic is a more 
-        general idea than bayesianism or frequentism.
-        Prob theory as an extension of logic includes both problems describable
-        by frequentism and bayesianism, and more.
-        
-        iiuc
-          Frequentism is only applicable to a very narrow range of problems at
-          least in science, because it assumes 
-            repeatable random experiments,
-              (Which is nearly always an approximation)
-            and no prior information about the outcomes.
-              (Which is nearly always available)
-          
-        Frequentism has problems
-          No way of eliminating nuisance parameters
             @What does that mean?
-          
-          No way of using all the information in the data, if a perfect
-          statistic doesn't exist.
-          
-          Statistic choice doesn't come as a result of the axioms, but is
-          instead chosen intuitively.
-          
-          A lot of methods in frequentism don't come from the axioms but are
-          just invented and assumed to be useful or important.
-            Unbiased estimators,
-            Confidence intervals,
-            Tail-area significance tests.
-          
-            Because of this, all these methods create inconsistencies,
-            a lot even in quite ordinary situations.
-          
-          Bayesianism can correct for all these problems. When working with
-          "well developed" problems.
-            @What does well developed mean?
-              mbg
-                A problem where:
-                  The hypothesis space is known,
-                  The prior probabilities of hypotheses are known.
-                  The model of what's likely given hypotheses is known.
+              tbh I'm not completely sure.
         
-        Bayesian methods allow to solve much more complicated problems than
-        frequentist methods.
+        The principle of maximum entropy works better if You don't have enough
+        extra information to define a model and sampling distribution.
+        Bayesianism works better than maximum entropy, if You have a correct
+        model and sampling distribution.
+          @What's a model and sample distribution?
+            tbh idk
         
-        iiuc
-          The principle of maximum entropy is something that might be used when
-          a problem is not yet well developed.
-            @What's the principle of maximum entropy?
-        
-          The principle of maximum entropy requires making very little
-          assumptions about the problem, and is useful in cases where very
-          little is known about the problem.
-            @What's knowledge and assumptions mean in this context?
-        
-          The principle of maximum entropy requires knowing the sample space.
-            @What does that even mean?
+        Jaynes proposes reading these books for examples of ??maximum entropy:
+          Bayesian Spectrum Analysis and Parameter Estimation by Bretthorst,
+          Maximum Entopy in action by Buck and Macaulay
+          Data Analysis - A Bayesian Tutorial by Sivia
         
   Part 1. Principles and elementary applications
     1. Plausible reasoning
