@@ -1,3 +1,11 @@
 Infinite-set paradoxing has become a morbid infection that is today spreading 
 in a way that threatens the very life of probability theory, and it requires 
 immediate surgical removal.
+
+...to tell us that a sugar substitute can produce a barely detectable incidence of
+cancer in doses 1000 times greater than would ever be encountered in practice, is hardly an
+argument against using the substitute... ...A similar overdose of sugar would be far more dangerous,
+leading not to barely detectable harmful effects, but to sure, immediate death by diabetic
+coma; yet nobody has proposed to ban the use of sugar in food.
+
+When a data set is mutilated (or, to use the common euphemism, 'filtered')...
