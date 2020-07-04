@@ -260,10 +260,12 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           
         Frequentism works baddly, when
         Prior information is important.
-          @What does that mean?
-            tbh idk.
+          What does that mean?
+            mbg
+              Prior information means something like assumptions you know
+              to be true about the problem.
         iiuc
-          Other philosophies don't have this limitation.
+          Other philosophies don't have this limitation as much.
           
         Frequentist statistics don't use all the data optimally if a good
         enough statistic doesn't exist.
@@ -318,33 +320,57 @@ Probability Theory - The Logic of Science by E.T. Jaynes
       Jaynes thinks it has potential for psychological or legal research.
         
     "What is 'safe'?"
+      What was the point of this chapter?
+        mbg
+          Showing that incorrect prior information baked into models and 
+          methods of analysis are important, and can lead to incorrect 
+          results.
+          
+          Also if the prior information is wrong, it's possible that no 
+          amount of data will bring correct results.
+          Example?
+            People assume a linear model between how much a substance is 
+            eaten and how toxic it is.
+            But that model is wrong, because many substances have thresholds
+            up to which they're not dangerous at all.
+            
+            So testing extremely large doses can lead to overestimating 
+            danger for normal doses,
+            and testing extremely small doses can lead to underestimating
+            the danger for normal doses.
+
+          iiuc
+            A more philosophy-level example of incorrect prior information:
+              You can't derive Newton mechanics by modeling a coin with a
+              stochastic model no matter how much data You get.
+      
+      Jaynes thinks these ideas are not taken seriously enough in medical
+      research, and this is very dangerous.
+      
+    "Style of Presentation"
       @Note Draft
-        Jaynes wants to show the importance of prior information in science,
-        because it currently is dangerously ignored in medical research.
+        Part 1 contains:
+          Explanations of the principles and axioms.
+          Explanations of where historically people have messed up.
+          Explanations for how to apply them.
+        Part 2 contains:
+          Just explanations of advanced applications.
         
-        Example
-          People assume a linear model between how much a substance is eaten
-          and how toxic it is.
-          But that model is wrong, because many substances have thresholds 
-          up to which they're not dangerous.
-          
-          So eating extremely large doses can lead to overestimating danger,
-          and eating extremely small doses can lead to underestimating.
-          
-        In other words
-          The prior information baked into a model, is very important,
-          because if the model is incorrect, 
-          correct conclusions might be impossible.
+        Math students usually struggle with connecting the axioms and
+        principles to the real world much more than with solving problems
+        once the principles are understood.
         
-        As a generalization of the example:
-          If old ideas for analyzing data are wrong in some situations, no
-          amount and quality of data will ever give correct results in those
-          situations.
+        Jaynes cares more about clarity and understandability than rigor.
+        Because
+          Rigor is useless if the assumptions are wrong and not well connected 
+          to real world.
         
-        What was the point of this chapter?
-          mbg
-            Showing examples of how prior information baked into the model or
-            the methods of analysis can lead to wrong results.
+        Jaynes thinks mathematics creates wrong results because of how it
+        handles infinite sets, so rigor doesn't even necessarily lead to 
+        correct results when working with infinite sets.
+        
+        mbg
+          Jaynes will use approximations
       
   Part 1. Principles and elementary applications
     1. Plausible reasoning
