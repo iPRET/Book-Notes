@@ -369,9 +369,17 @@ Probability Theory - The Logic of Science by E.T. Jaynes
         handles infinite sets, so rigor doesn't even necessarily lead to 
         correct results when working with infinite sets.
         
-        mbg
-          Jaynes will use approximations
-      
+        Jaynes will use continuous approximations for finite systems.
+        But he doesn't think "showing how to generate an uncoutable set as a
+        limit of a finite one" is important.
+          @What does that even mean?
+            tbh idk.
+        
+        Jaynes will be very strict with his derivations.
+        Everything will be a result of the axioms and rules, and it will be
+        
+        
+        
   Part 1. Principles and elementary applications
     1. Plausible reasoning
       1.1 Deductive and plausible reasoning
