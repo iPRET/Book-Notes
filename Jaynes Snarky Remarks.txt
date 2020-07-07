@@ -12,3 +12,11 @@ When a data set is mutilated (or, to use the common euphemism, 'filtered')...
 
 ‘Should one design a bridge using theory involving infinite sets
 or the axiom of choice? Might not the bridge collapse?’
+
+This trend is already well under way in several fields, ranging from
+econometrics to astronomy to magnetic resonance spectroscopy; but, to make progress in a
+new area, it is necessary to develop a healthy disrespect for tradition and authority, which
+have retarded progress throughout the 20th century.
+
+In any event, we feel sure that no further clarity would be achieved by taking the first few steps
+down that infinite regress that starts with: ‘What do you mean by “exists”?’

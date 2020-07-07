@@ -349,22 +349,38 @@ Probability Theory - The Logic of Science by E.T. Jaynes
       
     "Style of Presentation"
       @Note Draft
-        Part 1 contains:
-          Explanations of the principles and axioms.
-          Explanations of where historically people have messed up.
-          Explanations for how to apply them.
-        Part 2 contains:
-          Just explanations of advanced applications.
-        
-        Math students usually struggle with connecting the axioms and
-        principles to the real world much more than with solving problems
-        once the principles are understood.
-        
-        Jaynes cares more about clarity and understandability than rigor.
-        Because
-          Rigor is useless if the assumptions are wrong and not well connected 
-          to real world.
-        
+        What was the point of this chapter?
+          Explaining various details relating to
+            Structure of Jaynse's explanations
+            Jaynse's views relating to mathematical rigor and explanations.
+            Roasting classic classic frequentist methods a little.
+            
+        Structure of the book?
+          Part 1 contains:
+            Explanations of the principles and axioms.
+            Explanations for how to apply them.
+            Explanations of where historically people have messed up.
+          Part 2 contains:
+            Just explanations of advanced applications.
+          
+          Jaynes will usually
+            First explain the problem, and how people have failed in the past.
+            Then work out a couple examples.
+          
+        Opinions on how to explain axioms and principles?
+          Jaynes concentrates much more on connecting the principles and axioms
+          to the real world, than explaining how to apply the theory.
+            Because in his experience students have trouble understanding the
+            connection to the real world, 
+            but no trouble generalizing to new problems once they do.
+          
+          iiuc
+            When explaining the principles and axioms
+              Jaynes cares more about clarity and understandability than rigor.
+            Because
+              Rigor is useless if the the connection to the real world is not 
+              well understood.
+            
         Jaynes thinks mathematics creates wrong results because of how it
         handles infinite sets, so rigor doesn't even necessarily lead to 
         correct results when working with infinite sets.
@@ -376,9 +392,34 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             tbh idk.
         
         Jaynes will be very strict with his derivations.
-        Everything will be a result of the axioms and rules, and it will be
+        Everything will be a result of the axioms and rules.
+        And I suppose it will be clearly stated when extra assumptions or
+        approximations will be done.
         
+        Jaynes will not use statistics as the term is used in frequentism,
+        instead always using likelihood functions.
+        Jaynses Justifications for doing this:
+          the classic frequentist methods for working with statistics doesn't
+          come as a result of the axioms, and thus causes "paradoxes".
+          
+          The likelihood function perfectly includes all the information in the
+          data, while usually classic statistics don't.
+          
+          It is always clear how to write down a likelihood function, but not
+          always clear how to reduce the problem to a good statistic.
+          This allows for much harder problems to get solved.
+          
+          likelihood function calculations often allow for simplifications to
+          be done. (nuisance parameter elimination)
         
+        Jaynes tries to explain everything as understandably as possible,
+        that includes:
+          Not using any linguistic tricks or hidden meanings.
+          Explaning everything in plain English.
+          iiuc
+            Not explaining things that people understand intuitively 
+            exceptionally well like what does it mean for something to be true
+            or for something to exist.
         
   Part 1. Principles and elementary applications
     1. Plausible reasoning
