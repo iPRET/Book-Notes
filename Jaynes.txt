@@ -323,26 +323,26 @@ Probability Theory - The Logic of Science by E.T. Jaynes
       What was the point of this chapter?
         mbg
           Showing that incorrect prior information baked into models and 
-          methods of analysis are important, and can lead to incorrect 
+          methods of analysis is important, and can lead to incorrect 
           results.
           
-          Also if the prior information is wrong, it's possible that no 
-          amount of data will bring correct results.
-          Example?
-            People assume a linear model between how much a substance is 
-            eaten and how toxic it is.
-            But that model is wrong, because many substances have thresholds
-            up to which they're not dangerous at all.
-            
-            So testing extremely large doses can lead to overestimating 
-            danger for normal doses,
-            and testing extremely small doses can lead to underestimating
-            the danger for normal doses.
+      If the prior information is wrong, it's possible that no 
+      amount of data will bring correct results.
+      Example?
+        People assume a linear model between how much a substance is 
+        eaten and how toxic it is.
+        But that model is wrong, because many substances have thresholds
+        up to which they're not dangerous at all.
+        
+        So testing extremely large doses can lead to overestimating 
+        danger for normal doses,
+        and testing extremely small doses can lead to underestimating
+        the danger for normal doses.
 
-          iiuc
-            A more philosophy-level example of incorrect prior information:
-              You can't derive Newton mechanics by modeling a coin with a
-              stochastic model no matter how much data You get.
+      iiuc
+        A more philosophy-level example of incorrect prior information:
+          You can't derive Newton mechanics by modeling a coin with a
+          stochastic model no matter how much data You get.
       
       Jaynes thinks these ideas are not taken seriously enough in medical
       research, and this is very dangerous.
@@ -351,9 +351,9 @@ Probability Theory - The Logic of Science by E.T. Jaynes
       @Note Draft
         What was the point of this chapter?
           Explaining various details relating to
-            Structure of Jaynse's explanations
-            Jaynse's views relating to mathematical rigor and explanations.
-            Roasting classic classic frequentist methods a little.
+            Structure of Jaynse's explanations,
+            Jaynse's views relating to mathematical rigor and practicality,
+            Roasting classic frequentist methods a little.
             
         Structure of the book?
           Part 1 contains:
@@ -368,11 +368,12 @@ Probability Theory - The Logic of Science by E.T. Jaynes
             Then work out a couple examples.
           
         Opinions on how to explain axioms and principles?
-          Jaynes concentrates much more on connecting the principles and axioms
-          to the real world, than explaining how to apply the theory.
-            Because in his experience students have trouble understanding the
-            connection to the real world, 
-            but no trouble generalizing to new problems once they do.
+          Jaynes pays more attention to explaining the connection between the
+          world and the principles and axioms, than he does to applications.
+            Why?
+              Because in his experience students have trouble understanding the
+              connection to the real world, 
+              but no trouble generalizing to new problems once they do.
           
           iiuc
             When explaining the principles and axioms
@@ -381,36 +382,41 @@ Probability Theory - The Logic of Science by E.T. Jaynes
               Rigor is useless if the the connection to the real world is not 
               well understood.
             
-        Jaynes thinks mathematics creates wrong results because of how it
-        handles infinite sets, so rigor doesn't even necessarily lead to 
-        correct results when working with infinite sets.
+          Jaynes will be very strict with his derivations.
+          Everything will be a result of the axioms and rules.
+          And I suppose it will be clearly stated when extra assumptions or
+          approximations will be done.
         
-        Jaynes will use continuous approximations for finite systems.
-        But he doesn't think "showing how to generate an uncoutable set as a
-        limit of a finite one" is important.
-          @What does that even mean?
-            tbh idk.
+        Unorthodox opinions
+          Jaynes thinks mathematics creates wrong results because of how it
+          handles infinite sets, so rigor doesn't even necessarily lead to 
+          correct results when working with infinite sets.
         
-        Jaynes will be very strict with his derivations.
-        Everything will be a result of the axioms and rules.
-        And I suppose it will be clearly stated when extra assumptions or
-        approximations will be done.
+          Jaynes will use continuous approximations for finite systems.
+          But he doesn't think "showing how to generate an uncoutable set as a
+          limit of a finite one" is important.
+            @What does that even mean?
+              tbh idk.
         
-        Jaynes will not use statistics as the term is used in frequentism,
+        Jaynes will not do statistics as is done in frequentism,
         instead always using likelihood functions.
         Jaynses Justifications for doing this:
+        iiuc
           the classic frequentist methods for working with statistics doesn't
           come as a result of the axioms, and thus causes "paradoxes".
           
-          The likelihood function perfectly includes all the information in the
-          data, while usually classic statistics don't.
+          The likelihood function comes as a results of the axioms.
           
-          It is always clear how to write down a likelihood function, but not
-          always clear how to reduce the problem to a good statistic.
-          This allows for much harder problems to get solved.
-          
-          likelihood function calculations often allow for simplifications to
-          be done. (nuisance parameter elimination)
+          As a result the likelihood funciton works much better:
+            The likelihood function perfectly includes all the information in 
+            the data, while usually classic statistics don't.
+            
+            It is always clear how to write down a likelihood function, but not
+            always clear how to reduce the problem to a good statistic.
+            This allows for much harder problems to get solved.
+            
+            likelihood function calculations often allow for simplifications to
+            be done. (nuisance parameter elimination)
         
         Jaynes tries to explain everything as understandably as possible,
         that includes:
@@ -418,8 +424,8 @@ Probability Theory - The Logic of Science by E.T. Jaynes
           Explaning everything in plain English.
           iiuc
             Not explaining things that people understand intuitively 
-            exceptionally well like what does it mean for something to be true
-            or for something to exist.
+            exceptionally well and can't really reduce much further, like what 
+            does it mean for something to be true or exist.
         
   Part 1. Principles and elementary applications
     1. Plausible reasoning
